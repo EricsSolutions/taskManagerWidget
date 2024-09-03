@@ -1,0 +1,563 @@
+{
+    "projects": [
+
+
+
+
+        {
+            "name": "freelancing", 
+            "thumbnailUrl": "./images/freelancingCode.jpg",
+            "projectTitle": "Freelancing",
+            "columns": [
+                {
+                    "elementID": "col1Backlog",  
+                    "heading": "Backlog",
+                    "tasks": [
+                        {"text": "Sites: TopTal, etc."}
+                    ]
+                }, 
+                {
+                    "elementID": "col2Ready",  
+                    "heading": "Ready",
+                    "tasks": [
+                    ]
+                }, 
+                {
+                    "elementID": "col3InProgress",  
+                    "heading": "In Progress",
+                    "tasks": [
+                    ]
+                }, 
+                {
+                    "elementID": "col4Review",  
+                    "heading": "Review",
+                    "tasks": [
+                    ]
+                }, 
+                {
+                    "elementID": "col5Done",  
+                    "heading": "Done",
+                    "tasks": [
+                    ]
+                }
+            ]
+        }, 
+
+
+        {
+            "name": "ericsSolutions", 
+            "thumbnailUrl": "./images/ericsSolutions.png",
+            "projectTitle": "Eric's Solutions, LLC",
+            "columns": [
+                {
+                    "elementID": "col1Backlog",  
+                    "heading": "Backlog",
+                    "tasks": [
+                        {"text": "Make contracts"},
+                        {"text": "Make contracts databse"}
+                    ]
+                }, 
+                {
+                    "elementID": "col2Ready",  
+                    "heading": "Ready",
+                    "tasks": [
+                        {"text": "Use ChatGPT to finish pages. "}
+                    ]
+                }, 
+                {
+                    "elementID": "col3InProgress",  
+                    "heading": "In Progress",
+                    "tasks": [
+                    ]
+                }, 
+                {
+                    "elementID": "col4Review",  
+                    "heading": "Review",
+                    "tasks": [
+                    ]
+                }, 
+                {
+                    "elementID": "col5Done",  
+                    "heading": "Done",
+                    "tasks": [
+                    ]
+                }
+            ]
+        }, 
+
+
+        {
+            "name": "fullTimeEmployment", 
+            "thumbnailUrl": "./images/fulltimeDeveloper.png",
+            "projectTitle": "Full Time Employment",
+            "columns": [
+                {
+                    "elementID": "col1Backlog",  
+                    "heading": "Backlog",
+                    "tasks": [
+                        {"text": "LinkedIn Profile"}, 
+                        {"text": "certificates?"}, 
+                        {"text": "more social media"}
+                    ]
+                }, 
+                {
+                    "elementID": "col2Ready",  
+                    "heading": "Ready",
+                    "tasks": [
+                        {"text": "Resume"}
+                    ]
+                }, 
+                {
+                    "elementID": "col3InProgress",  
+                    "heading": "In Progress",
+                    "tasks": [
+                        {"text": "job applications"}
+                    ]
+                }, 
+                {
+                    "elementID": "col4Review",  
+                    "heading": "Review",
+                    "tasks": [
+                    ]
+                }, 
+                {
+                    "elementID": "col5Done",  
+                    "heading": "Done",
+                    "tasks": [
+                    ]
+                }
+            ]
+        }, 
+
+
+        {
+            "name": "plasma", 
+            "thumbnailUrl": "./images/plasma.png",
+            "projectTitle": "Plasma",
+            "columns": [
+                {
+                    "elementID": "col1Backlog",  
+                    "heading": "Backlog",
+                    "tasks": [
+                        {"text": "Test fit components onto 8.5\"x11\" printer paper test print of PCB. "}, 
+                        {"text": "Order components. "}, 
+                        {"text": "Order PCB's"}, 
+                        {"text": "Build It. "}
+                    ]
+                }, 
+                {
+                    "elementID": "col2Ready",  
+                    "heading": "Ready",
+                    "tasks": [
+                    ]
+                }, 
+                {
+                    "elementID": "col3InProgress",  
+                    "heading": "In Progress",
+                    "tasks": [
+                        {"text": "resume watching KiCAD tutorial{s here: https://www.youtube.com/watch?v=baCGoK8MuH0&list=PLn6004q9oeqGl91KifK6xHGuqvXGb374G&t=352s"}, 
+                        {"text": "Finish KiCAD deigns for PCB."}
+                    ]
+                }, 
+                {
+                    "elementID": "col4Review",  
+                    "heading": "Review",
+                    "tasks": [
+                    ]
+                }, 
+                {
+                    "elementID": "col5Done",  
+                    "heading": "Done",
+                    "tasks": [
+                    ]
+                }
+            ]
+        }, 
+
+
+        {
+            "name": "crystals", 
+            "thumbnailUrl": "./images/crystal.jpg",
+            "projectTitle": "Crystals",
+            "columns": [
+                {
+                    "elementID": "col1Backlog",  
+                    "heading": "Backlog",
+                    "tasks": [
+                        {"text": "Set up a more permanent workspace. "}
+                    ]
+                }, 
+                {
+                    "elementID": "col2Ready",  
+                    "heading": "Ready",
+                    "tasks": [
+                    ]
+                }, 
+                {
+                    "elementID": "col3InProgress",  
+                    "heading": "In Progress",
+                    "tasks": [
+                        {"text": "resume watching KiCAD tutorial{s here: https://www.youtube.com/watch?v=baCGoK8MuH0&list=PLn6004q9oeqGl91KifK6xHGuqvXGb374G&t=352s"}, 
+                        {"text": "<a href=\"./images/2024-07-27 crystal.jpg\"><img src=\"./images/2024-07-27 crystal.jpg\" alt=\"2024-07-27 crystal\">2024-07-27 crystal</a>"}
+                    ]
+                }, 
+                {
+                    "elementID": "col4Review",  
+                    "heading": "Review",
+                    "tasks": [
+                    ]
+                }, 
+                {
+                    "elementID": "col5Done",  
+                    "heading": "Done",
+                    "tasks": [
+                        {"text": "Buy liquid."}
+                    ]
+                }
+            ]
+        }, 
+
+
+        {
+            "name": "robotics", 
+            "thumbnailUrl": "./images/robotics.jpg",
+            "projectTitle": "Robotics",
+            "columns": [
+                {
+                    "elementID": "col1Backlog",  
+                    "heading": "Backlog",
+                    "tasks": [
+                        {"text": "Start working with photogrammetry, LIDAR, and Simultaneous Localization and Mapping (SLAM) in projects."}
+                    ]
+                }, 
+                {
+                    "elementID": "col2Ready",  
+                    "heading": "Ready",
+                    "tasks": [
+                    ]
+                }, 
+                {
+                    "elementID": "col3InProgress",  
+                    "heading": "In Progress",
+                    "tasks": [
+                    ]
+                }, 
+                {
+                    "elementID": "col4Review",  
+                    "heading": "Review",
+                    "tasks": [
+                    ]
+                }, 
+                {
+                    "elementID": "col5Done",  
+                    "heading": "Done",
+                    "tasks": [
+                    ]
+                }
+            ]
+        }, 
+
+
+        {
+            "name": "taxels", 
+            "thumbnailUrl": "./images/taxel.jpg",
+            "projectTitle": "Taxels",
+            "columns": [
+                {
+                    "elementID": "col1Backlog",  
+                    "heading": "Backlog",
+                    "tasks": [
+                        {"text": "Design PCB's for multiple prototypes."}, 
+                        {"text": "Order any electrical components. "}, 
+                        {"text": "Make 3D models of silicone molds. Print 3d parts. Cast parts (with magnets embedded in silicone). "}, 
+                        {"text": "Build & test. "}
+                    ]
+                }, 
+                {
+                    "elementID": "col2Ready",  
+                    "heading": "Ready",
+                    "tasks": [
+                    ]
+                }, 
+                {
+                    "elementID": "col3InProgress",  
+                    "heading": "In Progress",
+                    "tasks": [
+                    ]
+                }, 
+                {
+                    "elementID": "col4Review",  
+                    "heading": "Review",
+                    "tasks": [
+                    ]
+                }, 
+                {
+                    "elementID": "col5Done",  
+                    "heading": "Done",
+                    "tasks": [
+                    ]
+                }
+            ]
+        }, 
+
+
+        {
+            "name": "handMechanical", 
+            "thumbnailUrl": "./images/roboticHand.jpg",
+            "projectTitle": "Robotic Hand",
+            "columns": [
+                {
+                    "elementID": "col1Backlog",  
+                    "heading": "Backlog",
+                    "tasks": [
+                        {"text": "[acrylic prototype] see-through design"}, 
+                        {"text": "[acrylic prototype] absolute encoders (optical and/or magnetic)"}, 
+                        {"text": "[acrylic prototype] cheap 9g. servos"}, 
+                        {"text": "[acrylic prototype] lots of bearings and all degrees of motion"}, 
+                        {"text": "a wrist design"}, 
+                        {"text": "opposable thumb design"}, 
+                        {"text": "Add taxels in future iterations of the project. "}
+                    ]
+                }, 
+                {
+                    "elementID": "col2Ready",  
+                    "heading": "Ready",
+                    "tasks": [
+                    ]
+                }, 
+                {
+                    "elementID": "col3InProgress",  
+                    "heading": "In Progress",
+                    "tasks": [
+                    ]
+                }, 
+                {
+                    "elementID": "col4Review",  
+                    "heading": "Review",
+                    "tasks": [
+                    ]
+                }, 
+                {
+                    "elementID": "col5Done",  
+                    "heading": "Done",
+                    "tasks": [
+                    ]
+                }
+            ]
+        }, 
+
+
+        {
+            "name": "handTeflon", 
+            "thumbnailUrl": "./images/roboticHand.jpg",
+            "projectTitle": "Teflon Jointed Robotic Hand",
+            "columns": [
+                {
+                    "elementID": "col1Backlog",  
+                    "heading": "Backlog",
+                    "tasks": [
+                        {"text": "Teflon joints instead of bearings"},
+                        {"text": "the rest should be similar to the mechanical hand project"}
+                    ]
+                }, 
+                {
+                    "elementID": "col2Ready",  
+                    "heading": "Ready",
+                    "tasks": [
+                    ]
+                }, 
+                {
+                    "elementID": "col3InProgress",  
+                    "heading": "In Progress",
+                    "tasks": [
+                    ]
+                }, 
+                {
+                    "elementID": "col4Review",  
+                    "heading": "Review",
+                    "tasks": [
+                    ]
+                }, 
+                {
+                    "elementID": "col5Done",  
+                    "heading": "Done",
+                    "tasks": [
+                    ]
+                }
+            ]
+        }, 
+
+
+        {
+            "name": "kitchenAutomation", 
+            "thumbnailUrl": "./images/kitchenAutomation.jpg",
+            "projectTitle": "Kitchen Automation",
+            "columns": [
+                {
+                    "elementID": "col1Backlog",  
+                    "heading": "Backlog",
+                    "tasks": [
+                        {"text": ""}
+                    ]
+                }, 
+                {
+                    "elementID": "col2Ready",  
+                    "heading": "Ready",
+                    "tasks": [
+                    ]
+                }, 
+                {
+                    "elementID": "col3InProgress",  
+                    "heading": "In Progress",
+                    "tasks": [
+                    ]
+                }, 
+                {
+                    "elementID": "col4Review",  
+                    "heading": "Review",
+                    "tasks": [
+                    ]
+                }, 
+                {
+                    "elementID": "col5Done",  
+                    "heading": "Done",
+                    "tasks": [
+                    ]
+                }
+            ]
+        }, 
+
+
+        {
+            "name": "grilledCheeseMachine", 
+            "thumbnailUrl": "./images/.jpg",
+            "projectTitle": "Grilled Cheese Machine",
+            "columns": [
+                {
+                    "elementID": "col1Backlog",  
+                    "heading": "Backlog",
+                    "tasks": [
+                        {"text": "Design a minimum viable product."}
+                    ]
+                }, 
+                {
+                    "elementID": "col2Ready",  
+                    "heading": "Ready",
+                    "tasks": [
+                    ]
+                }, 
+                {
+                    "elementID": "col3InProgress",  
+                    "heading": "In Progress",
+                    "tasks": [
+                    ]
+                }, 
+                {
+                    "elementID": "col4Review",  
+                    "heading": "Review",
+                    "tasks": [
+                    ]
+                }, 
+                {
+                    "elementID": "col5Done",  
+                    "heading": "Done",
+                    "tasks": [
+                    ]
+                }
+            ]
+        }, 
+
+
+        {
+            "name": "dishwashingRobot", 
+            "thumbnailUrl": "./images/dishwashingRobot.jpg",
+            "projectTitle": "Dishwashing Robot",
+            "columns": [
+                {
+                    "elementID": "col1Backlog",  
+                    "heading": "Backlog",
+                    "tasks": [
+                        {"text": "Design a minimum viable product."}
+                    ]
+                }, 
+                {
+                    "elementID": "col2Ready",  
+                    "heading": "Ready",
+                    "tasks": [
+                    ]
+                }, 
+                {
+                    "elementID": "col3InProgress",  
+                    "heading": "In Progress",
+                    "tasks": [
+                    ]
+                }, 
+                {
+                    "elementID": "col4Review",  
+                    "heading": "Review",
+                    "tasks": [
+                    ]
+                }, 
+                {
+                    "elementID": "col5Done",  
+                    "heading": "Done",
+                    "tasks": [
+                    ]
+                }
+            ]
+        }, 
+
+
+        {
+            "name": "cookingRobot", 
+            "thumbnailUrl": "./images/cookingBot.png",
+            "projectTitle": "Dishwashing Robot",
+            "columns": [
+                {
+                    "elementID": "col1Backlog",  
+                    "heading": "Backlog",
+                    "tasks": [
+                        {"text": "Design a minimum viable product."}
+                    ]
+                }, 
+                {
+                    "elementID": "col2Ready",  
+                    "heading": "Ready",
+                    "tasks": [
+                    ]
+                }, 
+                {
+                    "elementID": "col3InProgress",  
+                    "heading": "In Progress",
+                    "tasks": [
+                    ]
+                }, 
+                {
+                    "elementID": "col4Review",  
+                    "heading": "Review",
+                    "tasks": [
+                    ]
+                }, 
+                {
+                    "elementID": "col5Done",  
+                    "heading": "Done",
+                    "tasks": [
+                    ]
+                }
+            ]
+        }
+
+
+
+
+
+
+
+        
+
+    ]
+
+
+
+
+}
