@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager Widget 6.0</title>
+    <link rel="favorite icon" href="#">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/modalStyles.css">
+</head>
+<body>
+
+    <!-- Button to Open Modal -->
+    <button id="openModalBtn" class="mac-button">(example) Edit List Modal</button>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal Content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span id="closeModalBtn" class="close">&times;</span>
+                <h2 class="modal-title">Project Name: ${nameGoesHere}, List: ${backlog,ready,done,etc}</h2>
+            </div>
+                <span id="taskListHeading">Delete or Rename Tasks:</span>
+            <div class="modal-body">
+                <div class="modalTaskItem"> <span class="taskText" contentEditable="true">LinkedIn</span> <span class="deleteBtn">[delete]</span> </div>
+                <div class="modalTaskItem"> <span class="taskText" contentEditable="true">certificates</span> <span class="deleteBtn">[delete]</span> </div>
+                <div class="modalTaskItem"> <span class="taskText" contentEditable="true">more sites</span> <span class="deleteBtn">[delete]</span> </div>
+                <div class="modalTaskItem"> <span class="taskText" contentEditable="true">more sites</span> <span class="deleteBtn">[delete]</span> </div>
+                <div class="modalTaskItem"> <span class="taskText" contentEditable="true">more sites</span> <span class="deleteBtn">[delete]</span> </div>
+                <div class="modalTaskItem"> <span class="taskText" contentEditable="true">more sites</span> <span class="deleteBtn">[delete]</span> </div>
+                <div class="modalTaskItem"> <span class="taskText" contentEditable="true">more sites</span> <span class="deleteBtn">[delete]</span> </div>
+                <div class="modalTaskItem"> <span class="taskText" contentEditable="true">more sites</span> <span class="deleteBtn">[delete]</span> </div>
+                <div class="modalTaskItem"> <span class="taskText" contentEditable="true">more sites</span> <span class="deleteBtn">[delete]</span> </div>
+                <div class="modalTaskItem"> <span class="taskText" contentEditable="true">more sites</span> <span class="deleteBtn">[delete]</span> </div>
+                <div class="modalTaskItem"> <span class="taskText" contentEditable="true">more sites</span> <span class="deleteBtn">[delete]</span> </div>
+                <div class="modalTaskItem"> <span class="taskText" contentEditable="true">more sites</span> <span class="deleteBtn">[delete]</span> </div>
+                <div class="modalTaskItem"> <span class="taskText" contentEditable="true">more sites</span> <span class="deleteBtn">[delete]</span> </div>
+                <div class="modalTaskItem"> <span class="taskText" contentEditable="true">more sites</span> <span class="deleteBtn">[delete]</span> </div>
+                <div class="modalTaskItem"> <span class="taskText" contentEditable="true">more sites</span> <span class="deleteBtn">[delete]</span> </div>
+                        
+                <div class="buttonsWrapper">
+                    <button class="mac-button">Cancel</button>
+                    <button class="mac-button">Save</button>
+                </div>
+                    
+            </div>
+        </div>
+    </div>
+
+    <div id="projectsWrapper"></div>
+
+    <script src="./js/app.js" type="module"></script>
+    <script src="./js/modalStuff.js" type="module"></script>
+</body>
+</html>
