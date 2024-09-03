@@ -13,13 +13,16 @@
                     "elementID": "col1Backlog",  
                     "heading": "Backlog",
                     "tasks": [
-                        {"text": "Sites: TopTal, etc."}
                     ]
                 }, 
                 {
                     "elementID": "col2Ready",  
                     "heading": "Ready",
                     "tasks": [
+                        {"text": "Toptal"}, 
+                        {"text": "Fiverr"}, 
+                        {"text": "Upwork"}, 
+                        {"text": "99 Designs"}
                     ]
                 }, 
                 {
@@ -197,8 +200,6 @@
                     "elementID": "col3InProgress",  
                     "heading": "In Progress",
                     "tasks": [
-                        {"text": "resume watching KiCAD tutorial{s here: https://www.youtube.com/watch?v=baCGoK8MuH0&list=PLn6004q9oeqGl91KifK6xHGuqvXGb374G&t=352s"}, 
-                        {"text": "<a href=\"./images/2024-07-27 crystal.jpg\"><img src=\"./images/2024-07-27 crystal.jpg\" alt=\"2024-07-27 crystal\">2024-07-27 crystal</a>"}
                     ]
                 }, 
                 {
@@ -211,7 +212,8 @@
                     "elementID": "col5Done",  
                     "heading": "Done",
                     "tasks": [
-                        {"text": "Buy liquid."}
+                        {"text": "Buy liquid."}, 
+                        {"text": "<a href=\"./images/2024-07-27 crystal.jpg\"><img src=\"./images/2024-07-27 crystal.jpg\" alt=\"2024-07-27 crystal\">2024-07-27 crystal</a>"}
                     ]
                 }
             ]
