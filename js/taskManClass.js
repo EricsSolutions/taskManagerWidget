@@ -159,7 +159,7 @@ export class taskManWidget {
                 });
 
                 thisColumnDiv.addEventListener('dragenter', function (e) {
-                    thisColumnDiv.style.border = '1px solid black';         
+                    thisColumnDiv.style.border = '1px solid lime';         
                 });
 
                 thisColumnDiv.addEventListener('dragleave', function () {

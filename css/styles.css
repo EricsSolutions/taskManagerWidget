@@ -1,7 +1,7 @@
 body{
     background-color: rgb(0, 0, 0);
     background-color: white;
-    background-color: rgb(117, 117, 117);
+    background-color: rgb(59, 59, 59);
 }
 
 #otherWrapper{
@@ -55,6 +55,7 @@ body{
     border: 1px solid gray;
     border-radius: 0.5rem;
     background-color: rgb(247, 247, 247);
+    background-color: rgb(0, 0, 0);
     /* background-color: rgb(245, 253, 252); */
 
 
@@ -66,7 +67,7 @@ body{
     max-width: 300px;
     width: 16%;
     vertical-align: top;
-    border: 1px solid rgb(161, 221, 255);
+    /* border: 1px solid rgb(161, 221, 255); */
     /* background-color: white; */
     margin: 0.5rem;
 
@@ -76,22 +77,19 @@ body{
 }
 
 .taskColumn.over {
-    border: 2px dashed #000; /* Feedback for drop target */
+    border: 2px dashed lime; /* Feedback for drop target */
 }
 
 .colHeading {
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     /* border-bottom: 3px solid rgb(255, 223, 176); */
     color: rgb(0, 153, 153);
     color: rgb(0, 0, 0);
-    background-color: rgb(249, 255, 221);
-    background-color: rgb(0, 116, 145);
-    background-color: rgb(0, 48, 59);
-    background-color: rgb(249, 255, 221);
-    background-color: rgb(214, 214, 214);
+    background-color: white;
     margin-bottom: 0.25rem;
-    padding: 0px 0.3rem;
+    padding: 0.5rem 0.3rem 0.5rem 0.3rem;
+    text-decoration: underline overline;
     border-radius: 0.33rem;
     text-align: center;
     text-transform: uppercase;
@@ -101,13 +99,14 @@ body{
     width: 97%;
     height: max-content;
     margin: 0 auto;
-    margin: 0.2rem auto;
-    padding: 0.13rem;
-    /* border-bottom: 1px solid rgb(148, 148, 148);  */
-    border: 2px solid blue;
+    margin: 0.4rem auto;
+    padding: 0.13rem 0.13rem 0.13rem 0.43rem;
     border-radius: 0.5rem;
-    color: #233536;
-    cursor: move; /* Indicates draggable */
+    cursor: move;
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
 }
 .singleTask.dragging {
     opacity: 0.5; /* Feedback while dragging */
@@ -169,14 +168,10 @@ body{
 /* Draggables /////////////////////////////////////////////////////////// */
 
 .draggable {
-    /* margin: 5px; */
-    /* padding: 10px; */
-    /* background-color: #f0f0f0; */
-    /* border: 1px solid #ccc; */
     cursor: move;
 }
 .dragging{
-    background-color: rgb(173, 252, 255);
+    background-color: rgb(255, 255, 0);
 }
 
 
@@ -188,15 +183,12 @@ body{
 }
 
 .oneProject {
-    border: 1px solid lime;
-    border: 1px solid white;
-    border: 1px solid rgb(0, 255, 217);
     background-color: rgb(215, 255, 249);
     background-color: rgb(208, 249, 255);
     background-color: rgb(208, 228, 255);
-    background-color: white;
     background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     border-radius: 0.85rem;
     padding: 1px 5px;
     margin: 0.75rem 1rem; 
@@ -233,12 +225,6 @@ body{
     margin: 0 auto 1rem auto;
     position: relative;
     top: 3px;
-    /* display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    font-weight: bold;
-    */
     background-position: center center;
     background-size: cover;
     display: inline-block;
