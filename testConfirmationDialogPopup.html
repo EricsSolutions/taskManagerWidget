@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Confirmation Dialog</title>
+    <link rel="favorite icon" href="#">
+    <style>
+
+
+
+.dialog-modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.dialog-modal-content {
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 600px;
+}
+.dialog-modal-header {
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+}
+.dialog-modal-body {
+    padding: 15px;
+    font-size: 16px;
+}
+.dialog-modal-footer {
+    padding: 15px;
+    border-top: 1px solid #ddd;
+    text-align: right;
+}
+.dialog-modal-footer button {
+    margin-left: 10px;
+}
+
+
+
+
+    </style>
+    <!-- <link rel="stylesheet" href="./css/modalStyles.css"> -->
+</head>
+<body>
+
+
+    <script>
+        
+
+class DialogModal {
+    constructor({
+        header = 'sample header',
+        body = 'sample body',
+        buttons = [{ text: 'OK', onClick: () => this.close() }],
+        width = '400px',
+        height = '200px'
+    } = {}) {
+        this.header = header;
+        this.body = body;
+        this.buttons = buttons;
+        this.width = width;
+        this.height = height;
+        this.modalElement = null;
+        this.createModal();
+    }
+
+    createModal() {
+        // Create modal elements
+        this.modalElement = document.createElement('div');
+        this.modalElement.className = 'dialog-modal';
+        this.modalElement.addEventListener('click', () => {
+            dialog.close();
+        });
+
+        const modalContent = document.createElement('div');
+        modalContent.className = 'dialog-modal-content';
+
+        // Create header
+        const modalHeader = document.createElement('div');
+        modalHeader.className = 'dialog-modal-header';
+        modalHeader.innerText = this.header;
+
+        // Create body
+        const modalBody = document.createElement('div');
+        modalBody.className = 'dialog-modal-body';
+        modalBody.innerHTML = this.body;
+
+        // Create buttons
+        const modalFooter = document.createElement('div');
+        modalFooter.className = 'dialog-modal-footer';
+        this.buttons.forEach(button => {
+            const btn = document.createElement('button');
+            btn.innerText = button.text;
+            btn.addEventListener('click', button.onClick);
+            modalFooter.appendChild(btn);
+        });
+
+        // Assemble modal
+        modalContent.appendChild(modalHeader);
+        modalContent.appendChild(modalBody);
+        modalContent.appendChild(modalFooter);
+        this.modalElement.appendChild(modalContent);
+
+        // Add modal to document
+        document.body.appendChild(this.modalElement);
+
+        // Add styles for modal
+        this.addStyles();
+    }
+
+    addStyles() {
+        const style = document.createElement('style');
+        style.innerHTML = `
+        `;
+        document.head.appendChild(style);
+    }
+
+    open() {
+        this.modalElement.style.display = 'flex';
+    }
+
+    close() {
+        this.modalElement.style.display = 'none';
+    }
+
+    destroy() {
+        document.body.removeChild(this.modalElement);
+    }
+}
+
+
+
+
+
+const dialog = new DialogModal({
+    header: 'Confirmation',
+    body: '<p>Are you sure you want to proceed?</p>',
+    buttons: [
+        {
+            text: 'Cancel',
+            onClick: () => {
+                console.log('Cancel clicked');
+                dialog.close();
+            }
+        },
+        {
+            text: 'Confirm',
+            onClick: () => {
+                console.log('Confirm clicked');
+                dialog.close();
+            }
+        }
+    ],
+    width: '500px',
+    height: '300px'
+});
+
+
+var thisButton = document.createElement('button');
+thisButton.innerHTML = 'button';
+document.body.append(thisButton);
+thisButton.addEventListener('click', ()=>{
+    dialog.open();
+})
+
+// To destroy the dialog after use
+// dialog.destroy();
+
+
+
+    </script>
+</body>
+</html>
