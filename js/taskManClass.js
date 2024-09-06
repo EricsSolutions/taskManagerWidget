@@ -19,19 +19,16 @@ export class taskManWidget {
             var thumbnailUrl = thisProjectJson.thumbnailUrl;
             var thisProjectDiv = document.createElement('div');
             thisProjectDiv.classList.add('oneProject');
-                var newThumbnailWrapper = document.createElement('div')
-                newThumbnailWrapper.classList.add('thumbnailWrapper');
-                var newThumbnail = document.createElement('div');
-                newThumbnail.classList.add('oneProjectThumbnail');
-                newThumbnail.style.backgroundImage = `url(${thumbnailUrl})`;
-                newThumbnailWrapper.append(newThumbnail);
-                var newTitleH2 = document.createElement('h2');
-                newTitleH2.innerHTML = `${thisProjectJson.projectTitle}`;
-                newThumbnailWrapper.append(newTitleH2);
-                thisProjectDiv.append(newThumbnailWrapper);
-                parentEl.append(thisProjectDiv);
-
-
+            var newThumbnailWrapper = document.createElement('div')
+            newThumbnailWrapper.classList.add('thumbnailWrapper');
+            var newThumbnail = document.createElement('div');
+            newThumbnail.classList.add('oneProjectThumbnail');
+            newThumbnail.style.backgroundImage = `url(${thumbnailUrl})`;
+            newThumbnailWrapper.append(newThumbnail);
+            var newTitleH2 = document.createElement('h2');
+            newTitleH2.innerHTML = `${thisProjectJson.projectTitle}`;
+            newThumbnailWrapper.append(newTitleH2);
+            thisProjectDiv.append(newThumbnailWrapper);
 
             var cols = thisProjectJson.columns;
 
@@ -82,6 +79,10 @@ export class taskManWidget {
                     thisColumnDiv.append(thisTaskDiv);
                 });
             });
+            var thisHr = document.createElement('hr');
+            parentEl.append(thisHr);
+            parentEl.append(thisProjectDiv);
+
         };
 
 
