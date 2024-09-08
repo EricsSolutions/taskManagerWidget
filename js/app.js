@@ -5,17 +5,49 @@ var jsonUrl = './js/allProjects.json';
 var projectName;
 var parentElID;
 
+
+
+function getProjectName(){
+    var projectName;
+    return projectName;
+}
+function getProjectThumbUrl(){
+    var projectThumbUrl;
+    return projectThumbUrl;
+}
+function getProjectTitle(){
+    var projectTitle;
+    return projectTitle;
+}
+function getColumns(){
+    var columns;
+    return columns;
+}
+function getThisColsHeading(){
+    var thisColsHeading;
+    return thisColsHeading;
+}
+function getThisColsID(){
+    var thisColsID;
+    return thisColsID;
+}
+function getThisColsTasks(){
+    var thisColsTasks;
+    return thisColsTasks;
+}
+
+
+
 function makeJsonFromHTML(){
     var allProjects = document.getElementsByClassName('oneProject');
     var json = {};
 
     Object.keys(allProjects)
-    .filter((k, i) => i >= 0 && i < 300)
-    // .forEach(k => console.log(allp))
-    .forEach((k)=>{
-        var thisData = extractProjectData(allProjects[k])
-        console.log(thisData);
-    });
+        .filter((k, i) => i >= 0 && i < 300)
+        .forEach((k)=>{
+            var thisData = extractProjectData(allProjects[k])
+            console.log(thisData);
+        });
 
     var keys = Object.keys(allProjects);
     console.log(keys);
@@ -23,29 +55,21 @@ function makeJsonFromHTML(){
 
     // Function to extract project data
     function extractProjectData(projectElement) {
-        // const thumbnail = projectElement.querySelector('.oneProjectThumbnail').style.backgroundImage.replace(/url\("|\)"/g, '');
-        const thumbnail = 'thumbnail URL';
-        const title = projectElement.querySelector('h2').textContent;
-        
-        const columns = Array.from(projectElement.querySelectorAll('.taskColumn')).map(column => {
-            // console.log(column);
-            const heading = column.querySelector('.colHeading').textContent;
-            const tasks = Array.from(column.querySelectorAll('.singleTask')).map(task => task.textContent.trim());
-            return {
-            heading,
-            tasks
-            };
-        });
+        var projectName = getProjectName();
+        var projectThumbUrl = getProjectThumbUrl();
+        var getProjectTitle = getProjectTitle();
+        var columns = getColumns();
+        var thisColsHeading = getThisColsHeading();
+        var thisColsID = getThisColsID();
+        var thisColsTasks = getThisColsTasks();
+;
 
-        return {
-            thumbnail,
-            title,
-            columns
-        };
+        // return {
+            // thumbnail,
+            // title,
+            // columns
+        // };
     }
-    // Extract all projects
-    var projects = Array.from(doc.querySelectorAll('.oneProject')).map(extractProjectData);
-    // console.log(projects);
 
     // Convert to JSON
     // const json = JSON.stringify(projects, null, 2);
@@ -69,9 +93,7 @@ function makeAllProjects(){
                 var thisProjectName = thisProjectJson.name;
                 var thisTaskManWidget = new taskManWidget(thisProjectJson, thisProjectName, projectsWrapperID);
             })
-        })
-        .then(()=>{
-            makeJsonFromHTML()
+            makeJsonFromHTML();
         })
         .catch(error => {
             console.error('There was a problem with the fetch operation:', error);
