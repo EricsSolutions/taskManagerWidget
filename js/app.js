@@ -16,8 +16,7 @@ function getProjectThumbUrl(){
     return projectThumbUrl;
 }
 function getProjectTitle(){
-    var projectTitle;
-    return projectTitle;
+
 }
 function getColumns(){
     var columns;
@@ -45,7 +44,7 @@ function makeJsonFromHTML(){
     Object.keys(allProjects)
         .filter((k, i) => i >= 0 && i < 300)
         .forEach((k)=>{
-            var thisData = extractProjectData(allProjects[k])
+            var thisData = extractProjectData(allProjects[k]);
             console.log(thisData);
         });
 
@@ -57,18 +56,29 @@ function makeJsonFromHTML(){
     function extractProjectData(projectElement) {
         var projectName = getProjectName();
         var projectThumbUrl = getProjectThumbUrl();
-        var getProjectTitle = getProjectTitle();
+        var projectTitle = getProjectTitle();
         var columns = getColumns();
         var thisColsHeading = getThisColsHeading();
         var thisColsID = getThisColsID();
         var thisColsTasks = getThisColsTasks();
-;
 
-        // return {
-            // thumbnail,
-            // title,
-            // columns
-        // };
+        // THIS NEEDS TO BE NESTED OR RECURSIVELY CALLED OR SOMETHING ELSE
+
+        return {
+            "name": projectName,
+            "thumbnailUrl": projectThumbUrl, 
+            "projectTitle": projectTitle,
+            "columns": [
+                "elementID": "col2Ready",  
+                "heading": "Ready",
+                "tasks": [
+                    {"text": "Toptal"}, 
+                    {"text": "Fiverr"}, 
+                    {"text": "Upwork"}, 
+                    {"text": "99 Designs"}
+                ]
+            ]
+        };
     }
 
     // Convert to JSON
