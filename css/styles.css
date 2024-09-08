@@ -187,7 +187,8 @@ body{
     border-radius: 0.85rem;
     /* border: 3px solid black; */
     padding: 1px 5px;
-    margin: 1.75rem 1rem; 
+    /* margin: 1.75rem 1rem;  */
+    margin: 0 1rem;
     display: inline-block;
     width: 97vw;
     text-align: left;
