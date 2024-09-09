@@ -161,17 +161,17 @@ export class taskManWidget {
                 });
 
                 thisColumnDiv.addEventListener('dragenter', function (e) {
-                    thisColumnDiv.style.border = '1px solid lime';         
+                    // thisColumnDiv.style.border = '1px solid lime';         
                 });
 
                 thisColumnDiv.addEventListener('dragleave', function () {
-                    thisColumnDiv.style.backgroundColor = '';
-                    thisColumnDiv.style.border = '';         
+                    // thisColumnDiv.style.backgroundColor = '';
+                    // thisColumnDiv.style.border = '';         
                 });
 
                 thisColumnDiv.addEventListener('drop', function (e) {
-                    thisColumnDiv.style.backgroundColor = '';
-                    thisColumnDiv.style.border = '';
+                    // thisColumnDiv.style.backgroundColor = '';
+                    // thisColumnDiv.style.border = '';
                 });
             });
         }
