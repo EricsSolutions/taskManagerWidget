@@ -8,9 +8,8 @@ var parentElID;
 
 
 function getProjectName(projectElement){
-    var projectName = projectElement;
+    var projectName = projectElement.id;
     console.log(projectName);
-    console.log('pr');
     return projectName;
 }
 function getProjectThumbUrl(projectElement){
@@ -37,75 +36,63 @@ function getThisColsHeading(thisCol){
     var thisColsHeading;
     return thisColsHeading;
 }
-function getThisColsID(){
+function getThisColsID(thisCol){
     var thisColsID;
     return thisColsID;
 }
-function getThisColsTasks(){
-    var thisColsTasks = []
-    var allTaskDivs = col.querySlectorAll('.singleTask');
-    allTaskDivs.forEach((thisTask) => {
-        thisColsTasks.append(thisTask.innerHtml);
-    })
-    return thisColsTasks;
+function getThisColsTasks(thisCol){
+    var output = [];
+    var allTaskDivs = thisCol.getElementsByClassName('singleTask');
+    for(var i=0; i<allTaskDivs.length; i++){
+        var thisTaskText = allTaskDivs[i].innerText;
+        // console.log(thisTask.innerText);
+        output.push(thisTaskText);
+    }
+    return output;
 }
 
 
 
 function makeJsonFromHTML(){
     var allProjects = document.getElementsByClassName('oneProject');
-    var outputJsonProjects = [];
+    var outputArrOfProjects = [];
 
-    // for (var i=0; i<allProjects.length; i++){
-    //     var thisProjectsJson = extractProjectData(allProjects[i]);
-    //     // console.log(thisProjectsJson);
-    // }
     Object.keys(allProjects)
         .filter((k, i) => i >= 0 && i < 300)
         .forEach((k)=>{
-            var thisProjectsJson = extractProjectData(allProjects[k]);
-            // console.log(thisData);
-            outputJsonProjects.push(thisProjectData);
-        });
+            var thisProject = allProjects[k];
+            var thisProjectsJson = extractProjectData(thisProject);
+            outputArrOfProjects.push(thisProjectsJson);
 
-    var keys = Object.keys(allProjects);
-    // console.log(keys);
+            // console.log(outputArrOfProjects);
+            console.log(`output: ${outputArrOfProjects}`);
+        });
 
 
     // Function to extract project data
     function extractProjectData(projectElement) {
         var thisProjectsJson = {};
-        var projectName = getProjectName(projectElement);
-        var projectThumbUrl = getProjectThumbUrl(projectElement);
-        var projectTitle = getProjectTitle(projectElement);
-        var allCols = getAllCols(projectElement);
-        var thisColsHeading = getThisColsHeading(projectElement);
-        var thisColsID = getThisColsID(projectElement);
-        var thisColsTasks = [];
+        thisProjectsJson["name"] = getProjectName(projectElement);
+        thisProjectsJson["thumbnailUrl"] = getProjectThumbUrl(projectElement);
+        thisProjectsJson["projectTitle"] = getProjectTitle(projectElement);
+        var allColsElements = getAllCols(projectElement);
+        var allColsData = {};
 
 
-        for (var i=0; i<allCols.length; i++){
-
+        for (var i=0; i<allColsElements.length; i++){
+            var thisColsHeading = getThisColsHeading(projectElement);
+            var thisColsID = getThisColsID(projectElement);
+            var thisColsTasks = getThisColsTasks(projectElement);
         }
 
-        allCols.forEach((col)=>{
-            thisColsTasks = getThisColsTasks(col);
-        })
+        thisProjectsJson["columns"] = allColsData;
+        // console.log(thisProjectsJson);
 
 
 
 
-        // allCols = getallCols(projectElement);
 
-        // allCols.ForEach((col) => {
-        //     thisColsHeading = getThisColsHeading(col);
-        //     thisColsID = getThisColsID(col);
-        //     thisColsTasks = getThisColsTasks(col);
-            
-        // });
-        thisColsHeading = getThisColsHeading(projectElement);
-        thisColsID = getThisColsID(projectElement);
-        thisColsTasks = getThisColsTasks(projectElement);
+        
 
         // THIS NEEDS TO BE NESTED OR RECURSIVELY CALLED OR SOMETHING ELSE
 
