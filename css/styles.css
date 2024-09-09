@@ -122,23 +122,25 @@ body{
     color: rgb(0, 153, 153);
     color: black;
     font-size: 1.5rem;
-    position: absolute; bottom: 0px; right: 0px;
-    cursor:pointer; /* Indicates draggable */
+    position: absolute; bottom: 0px; left: 0px;
+    cursor:pointer; /* Indicates clickable */
     border-radius: 0.5rem;
     background-color: rgb(249, 255, 221);
     background-color: rgb(231, 231, 231);
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 0;
-    border-top: 1px solid rgb(168, 238, 255);
-    border-left: 1px solid rgb(168, 238, 255);
+    /* border-top-right-radius: 0; */
+    /* border-bottom-left-radius: 0; */
+    border: 1px solid rgb(168, 238, 255);
+    /* border-left: 1px solid rgb(168, 238, 255); */
 }
 .editListButton {
     width: min-content;
     height: 1.5rem;
+
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     margin: auto auto 0.5rem auto;
     padding: 0 0.7rem;
     margin: 0.25rem .5rem 0.25rem 1.5rem;
@@ -150,9 +152,12 @@ body{
     background-color: rgb(231, 231, 231);
     font-size: 0.77rem;
     font-weight: bold;
-    position: absolute; bottom: 0px; left: 50%;
-    transform: translate(-50%);
-    cursor:pointer; /* Indicates draggable */
+
+    position: absolute; bottom: 0px; left: 3.3rem;
+    /* position: absolute; bottom: 0px; left: 50%; */
+    /* transform: translate(-50%); */
+
+    cursor:pointer; /* Indicates clickable */
     /* border-top: 1px solid blue;
     border-right: 1px solid blue; */
     border-top-right-radius: 0.5rem;

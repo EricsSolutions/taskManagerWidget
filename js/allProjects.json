@@ -431,7 +431,7 @@
 
         {
             "name": "grilledCheeseMachine", 
-            "thumbnailUrl": "./images/.jpg",
+            "thumbnailUrl": "",
             "projectTitle": "Grilled Cheese Machine",
             "columns": [
                 {

@@ -2,13 +2,6 @@ import { taskManWidget } from './taskManClass.js';
 
 var projectsWrapperID = 'projectsWrapper';
 var jsonUrl = './js/allProjects.json';
-var projectName;
-var parentElID;
-
-
-
-
-
 
 
 function getProjectName(projectElement){
@@ -96,20 +89,13 @@ function makeJsonFromHTML(){
             var thisProject = allProjects[k];
             var thisProjectsJson = extractProjectData(thisProject);
             outputArrOfProjects.push(thisProjectsJson);
-
             // console.log(outputArrOfProjects);
             // console.log(`output: ${outputArrOfProjects}`);
         });
-
-
-
-
-
     // Output JSON (e.g., log to console or save to a file)
     // console.log('\n\n JSON: ');
-    console.log(outputArrOfProjects);
+    // console.log(outputArrOfProjects);
 }
-
 
 
 
