@@ -54,7 +54,7 @@ body{
     border-radius: 0.5rem;
     background-color: rgb(209, 248, 255);
     background-color: rgb(228, 250, 255);
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(238, 238, 238);
 
 
 
@@ -65,7 +65,7 @@ body{
     max-width: 300px;
     width: 16%;
     vertical-align: top;
-    border: 1px solid rgb(0, 0, 0);
+    border: 1px solid rgb(160, 160, 160);
     /* background-color: white; */
     margin: 0.5rem;
 
@@ -99,15 +99,17 @@ body{
 .singleTask {
     width: 97%;
     height: max-content;
-    margin: 0 auto;
-    margin: 0.4rem auto;
+    margin: 0.15rem auto;
     padding: 0.13rem 0.13rem 0.13rem 0.43rem;
     border-radius: 0.5rem;
+    border: 1px solid rgb(126, 126, 126);
     cursor: move;
     color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     background-color: rgb(17, 0, 255);
+    background-color: rgb(255, 255, 255);
     font-weight: bold;
-    box-shadow: 0 2px 2px rgb(0, 0, 0);
+    box-shadow: 0 2px 2px rgb(141, 141, 141);
 }
 .singleTask.dragging {
     opacity: 0.5; /* Feedback while dragging */
