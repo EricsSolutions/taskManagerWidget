@@ -1,9 +1,9 @@
 export class taskManWidget {
-    constructor(thisProjectJson, projectName, parentElID){
+    constructor(thisProjectJson, parentElID){
         this.thisProjectJson = thisProjectJson;
-        this.projectName = projectName;
         this.parentElID = parentElID;
-
+        
+        var projectName = thisProjectJson.name;
         var collectionOfTaskArrs = {
             'col1BacklogArr': [], 
             'col2ReadyArr': [], 
