@@ -19,33 +19,32 @@ function getProjectThumbUrl(projectElement){
 function getProjectTitle(projectElement){
 
 }
-function getAllCols(projectElement){
-    var columns = projectElement.getElementsByClassName('taskColumn');
-    return columns;
+function getAllColsElements(projectElement){
+    var colEls = projectElement.getElementsByClassName('taskColumn');
+    return colEls;
 }
 function getThisColsData(thisCol){
     var thisColsData = {};
-    var thisColsHeading = getThisColsHeading(thisCol);
-    var thisColsID = getThisColsID(thisCol);
-    var thisColsTasks = getThisColsTasks(thisCol);
-    thisColsData.heading = thisColsHeading;
+    thisColsData["heading"] = getThisColsHeading(thisCol);
+    thisColsData["elementID"] = getThisColsID(thisCol);
+    thisColsData["tasks"] = getThisColsTasks(thisCol);
     console.log(thisColsData);
     return thisColsData;
 }
 function getThisColsHeading(thisCol){
-    var thisColsHeading;
+    var thisColsHeading = thisCol.getElementsByClassName('colHeading')[0].innerText;
     return thisColsHeading;
 }
 function getThisColsID(thisCol){
-    var thisColsID;
+    var thisColsID = thisCol.id;
     return thisColsID;
 }
 function getThisColsTasks(thisCol){
     var output = [];
     var allTaskDivs = thisCol.getElementsByClassName('singleTask');
     for(var i=0; i<allTaskDivs.length; i++){
-        var thisTaskText = allTaskDivs[i].innerText;
-        // console.log(thisTask.innerText);
+        var thisTask = allTaskDivs[i];
+        var thisTaskText = thisTask.innerText;
         output.push(thisTaskText);
     }
     return output;
@@ -75,14 +74,13 @@ function makeJsonFromHTML(){
         thisProjectsJson["name"] = getProjectName(projectElement);
         thisProjectsJson["thumbnailUrl"] = getProjectThumbUrl(projectElement);
         thisProjectsJson["projectTitle"] = getProjectTitle(projectElement);
-        var allColsElements = getAllCols(projectElement);
-        var allColsData = {};
-
+        var allColsElements = getAllColsElements(projectElement);
+        var allColsData = [];
 
         for (var i=0; i<allColsElements.length; i++){
-            var thisColsHeading = getThisColsHeading(projectElement);
-            var thisColsID = getThisColsID(projectElement);
-            var thisColsTasks = getThisColsTasks(projectElement);
+            var thisCol = allColsElements[i];
+            var thisColsData = getThisColsData(thisCol);
+            allColsData.push(thisColsData);
         }
 
         thisProjectsJson["columns"] = allColsData;
@@ -92,7 +90,7 @@ function makeJsonFromHTML(){
 
 
 
-        
+
 
         // THIS NEEDS TO BE NESTED OR RECURSIVELY CALLED OR SOMETHING ELSE
 
