@@ -7,19 +7,20 @@ var parentElID;
 
 
 
-function getProjectName(){
-    var projectName;
+function getProjectName(projectElement){
+    var projectName = projectElement;
+    console.log(projectName);
+    console.log('pr');
     return projectName;
 }
-function getProjectThumbUrl(){
+function getProjectThumbUrl(projectElement){
     var projectThumbUrl;
     return projectThumbUrl;
 }
-function getProjectTitle(){
+function getProjectTitle(projectElement){
 
 }
-function getColumns(projectElement){
-    // var columns = projectElement.querySlectorAll('.taskColumn')
+function getAllCols(projectElement){
     var columns = projectElement.getElementsByClassName('taskColumn');
     return columns;
 }
@@ -55,18 +56,17 @@ function makeJsonFromHTML(){
     var allProjects = document.getElementsByClassName('oneProject');
     var outputJsonProjects = [];
 
-    for (var i=0; i<allProjects.length; i++){
-        var thisProjectsJson = extractProjectData(allProjects[i]);
-        // console.log(thisProjectsJson);
-    }
+    // for (var i=0; i<allProjects.length; i++){
+    //     var thisProjectsJson = extractProjectData(allProjects[i]);
+    //     // console.log(thisProjectsJson);
+    // }
     Object.keys(allProjects)
         .filter((k, i) => i >= 0 && i < 300)
         .forEach((k)=>{
             var thisProjectsJson = extractProjectData(allProjects[k]);
             // console.log(thisData);
+            outputJsonProjects.push(thisProjectData);
         });
-    var thisProjectData = extractProjectData(outputJsonProjects);
-    outputJsonProjects.push(thisProjectData);
 
     var keys = Object.keys(allProjects);
     // console.log(keys);
@@ -74,30 +74,30 @@ function makeJsonFromHTML(){
 
     // Function to extract project data
     function extractProjectData(projectElement) {
-        var thisProjectsJson;
+        var thisProjectsJson = {};
         var projectName = getProjectName(projectElement);
         var projectThumbUrl = getProjectThumbUrl(projectElement);
         var projectTitle = getProjectTitle(projectElement);
-        var columns = getColumns(projectElement);
+        var allCols = getAllCols(projectElement);
         var thisColsHeading = getThisColsHeading(projectElement);
         var thisColsID = getThisColsID(projectElement);
         var thisColsTasks = [];
 
 
-        for (var i=0; i<columns.length; i++){
-            
+        for (var i=0; i<allCols.length; i++){
+
         }
 
-        columns.forEach((col)=>{
+        allCols.forEach((col)=>{
             thisColsTasks = getThisColsTasks(col);
         })
 
 
 
 
-        // columns = getColumns(projectElement);
+        // allCols = getallCols(projectElement);
 
-        // columns.ForEach((col) => {
+        // allCols.ForEach((col) => {
         //     thisColsHeading = getThisColsHeading(col);
         //     thisColsID = getThisColsID(col);
         //     thisColsTasks = getThisColsTasks(col);

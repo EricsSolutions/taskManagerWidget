@@ -18,6 +18,7 @@ export class taskManWidget {
         this.makeJsonIntoHtml = ()=>{
             var thumbnailUrl = thisProjectJson.thumbnailUrl;
             var thisProjectDiv = document.createElement('div');
+            thisProjectDiv.setAttribute('id', thisProjectJson.projectName);
             thisProjectDiv.classList.add('oneProject');
             var newThumbnailWrapper = document.createElement('div')
             newThumbnailWrapper.classList.add('thumbnailWrapper');
