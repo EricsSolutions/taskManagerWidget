@@ -21,6 +21,7 @@ function getProjectThumbUrl(projectElement){
 }
 function getProjectTitle(projectElement){
     var title = projectElement.querySelectorAll('h2')[0].innerText;
+    return title;
 }
 function getAllColsElements(projectElement){
     var colEls = projectElement.getElementsByClassName('taskColumn');
