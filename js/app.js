@@ -18,11 +18,21 @@ function getProjectThumbUrl(){
 function getProjectTitle(){
 
 }
-function getColumns(){
-    var columns;
+function getColumns(projectElement){
+    // var columns = projectElement.querySlectorAll('.taskColumn')
+    var columns = projectElement.getElementsByClassName('taskColumn');
     return columns;
 }
-function getThisColsHeading(){
+function getThisColsData(thisCol){
+    var thisColsData = {};
+    var thisColsHeading = getThisColsHeading(thisCol);
+    var thisColsID = getThisColsID(thisCol);
+    var thisColsTasks = getThisColsTasks(thisCol);
+    thisColsData.heading = thisColsHeading;
+    console.log(thisColsData);
+    return thisColsData;
+}
+function getThisColsHeading(thisCol){
     var thisColsHeading;
     return thisColsHeading;
 }
@@ -31,7 +41,11 @@ function getThisColsID(){
     return thisColsID;
 }
 function getThisColsTasks(){
-    var thisColsTasks;
+    var thisColsTasks = []
+    var allTaskDivs = col.querySlectorAll('.singleTask');
+    allTaskDivs.forEach((thisTask) => {
+        thisColsTasks.append(thisTask.innerHtml);
+    })
     return thisColsTasks;
 }
 
@@ -43,7 +57,7 @@ function makeJsonFromHTML(){
 
     for (var i=0; i<allProjects.length; i++){
         var thisProjectsJson = extractProjectData(allProjects[i]);
-        console.log(thisProjectsJson);
+        // console.log(thisProjectsJson);
     }
     Object.keys(allProjects)
         .filter((k, i) => i >= 0 && i < 300)
@@ -64,39 +78,31 @@ function makeJsonFromHTML(){
         var projectName = getProjectName(projectElement);
         var projectThumbUrl = getProjectThumbUrl(projectElement);
         var projectTitle = getProjectTitle(projectElement);
-        var columns;
-        var thisColsHeading;
-        var thisColsID;
-        var thisColsTasks;
+        var columns = getColumns(projectElement);
+        var thisColsHeading = getThisColsHeading(projectElement);
+        var thisColsID = getThisColsID(projectElement);
+        var thisColsTasks = [];
 
 
-        function getColumns(projectElement){
-            var thisColumn;
-            return thisColumn;
-        };
-        function getThisColsHeading(col){
-            var thisColsHeading;
-            return thisColsHeading;
-        };
-        function getThisColsID(col){
-            var thisColsID;
-            return thisColsID;
-        };
-        function getThisColsTasks(col){
-            var thisColsTasks;
-            return thisColsTasks;
-        };
-
-
-
-        columns = getColumns(projectElement);
-
-        columns.ForEach((col) => {
-            thisColsHeading = getThisColsHeading(col);
-            thisColsID = getThisColsID(col);
-            thisColsTasks = getThisColsTasks(col);
+        for (var i=0; i<columns.length; i++){
             
-        });
+        }
+
+        columns.forEach((col)=>{
+            thisColsTasks = getThisColsTasks(col);
+        })
+
+
+
+
+        // columns = getColumns(projectElement);
+
+        // columns.ForEach((col) => {
+        //     thisColsHeading = getThisColsHeading(col);
+        //     thisColsID = getThisColsID(col);
+        //     thisColsTasks = getThisColsTasks(col);
+            
+        // });
         thisColsHeading = getThisColsHeading(projectElement);
         thisColsID = getThisColsID(projectElement);
         thisColsTasks = getThisColsTasks(projectElement);
