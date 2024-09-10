@@ -135,7 +135,7 @@ body{
     /* border-left: 1px solid rgb(168, 238, 255); */
 }
 .editListButton {
-    width: min-content;
+    width: max-content;
     height: 1.5rem;
 
     text-align: center;

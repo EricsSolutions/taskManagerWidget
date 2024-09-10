@@ -60,7 +60,8 @@ export class taskManWidget {
 
 
                 var thisEditTasksButton = document.createElement('div');
-                thisEditTasksButton.innerHTML = `[EDIT]`;
+                thisEditTasksButton.innerHTML = `. . . more options`;
+                // thisEditTasksButton.innerHTML = `[EDIT / DELETE]`;
                 thisEditTasksButton.classList.add('editListButton');
                 thisEditTasksButton.addEventListener('click', function(){
                     addItem(parentColumn);
