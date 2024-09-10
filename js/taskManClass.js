@@ -1,3 +1,5 @@
+import { makeJsonFromHTML } from "./app.js";
+
 export class taskManWidget {
     constructor(thisProjectJson, parentElID){
         this.thisProjectJson = thisProjectJson;
@@ -172,6 +174,7 @@ export class taskManWidget {
                 thisColumnDiv.addEventListener('drop', function (e) {
                     // thisColumnDiv.style.backgroundColor = '';
                     // thisColumnDiv.style.border = '';
+                    makeJsonFromHTML();
                 });
             });
         }
