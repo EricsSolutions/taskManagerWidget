@@ -26,7 +26,8 @@ body, h2, p {
     padding: 20px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.596);
     max-width: 600px;
-    margin: 11% auto;
+    /* margin: 11% auto; */
+    margin: auto;
     border: 1px solid #888;
     width: 80%;
 }

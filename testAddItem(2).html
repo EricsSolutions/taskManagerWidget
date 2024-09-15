@@ -6,21 +6,100 @@
     <title>Add Item Dialog (2)</title>
     <link rel="stylesheet" href="./css/modalStyles.css">
     <style>
+        #modalAddItemWrapper{
+            min-width: 333px;
+            width: max-content;
+            /* min-height: 33px; */
+            border: 1px solid rgb(0, 204, 255);
+            background-color: white;
+            position: absolute;
+
+            padding: 0.5rem;
+            border-radius: 8px;
+        }
+
+        .show {
+            display: block; visibility: visible;
+        }
+        .hide {
+            display: none; visibility: hidden;
+        }
         
     </style>
 </head>
 <body>
     
-    
-    <script>
+    <input type="button" class="mac-button" value="click me" id="btnAddItem">
+
+    <div id="modalAddItemWrapper" class="hide"></div>
+
+
+<script>
 
 
 class AddItemModal {
-    constructor(){
+    constructor(column){
+        this.column = column;
+    }
+
+    createModalContent(title){
+        // this.modalElement = document.createElement('div');
+        // this.modalElement.classList.add('modalAddItemWrapper');
+    }
+
+    showModal(){
 
     }
 }
+
+function addItem(e, mouseX, mouseY, col){
+    var thisModal = new AddItemModal(col);
+    var modalAddItemWrapper = document.getElementById('modalAddItemWrapper');
+    modalAddItemWrapper.classList.add('show');
+    modalAddItemWrapper.classList.remove('hide');
+    modalAddItemWrapper.style.left = `${mouseX-13}px`;
+    modalAddItemWrapper.style.top = `${mouseY-35}px`;
+
+
+
+const closeModalBtn = document.createElement('span');
+closeModalBtn.id = 'closeModalBtn';
+closeModalBtn.className = 'close';
+closeModalBtn.textContent = '×';
+
+
+modalAddItemWrapper.appendChild(closeModalBtn);
+// modalAddItemWrapper.appendChild(modalTitle);
+// modalAddItemWrapper.appendChild(modalHeader);
+// modalAddItemWrapper.appendChild(taskListHeading);
+
+
+var newTask = document.createElement('input');
+// newTask.innerHTML = 'New: ';
+newTask.setAttribute('input', 'text')
+newTask.setAttribute('placeholder', 'New Task')
+newTask.style.width = '333px';
+newTask.style.marginRight = '0.75rem';
+// newTask.classList.add
+modalAddItemWrapper.appendChild(newTask);
+newTask.focus();
+
+var addBtn = document.createElement('button');
+addBtn.innerHTML = 'Add Task';
+addBtn.style.marginRight = '0.75rem';
+
+modalAddItemWrapper.appendChild(addBtn);
+}
         
+
+var btnAddItem = document.getElementById('btnAddItem');
+
+btnAddItem.addEventListener('click', (e) => {
+            // Get mouse coordinates
+            const mouseX = e.clientX;
+            const mouseY = e.clientY;
+            addItem(e, mouseX, mouseY)
+    })
     </script>
 </body>
 </html>
