@@ -6,6 +6,11 @@
     <title>Add Item Dialog (2)</title>
     <link rel="stylesheet" href="./css/modalStyles.css">
     <style>
+
+
+
+
+
         #modalAddItemWrapper{
             min-width: 333px;
             width: max-content;
@@ -16,6 +21,8 @@
 
             padding: 0.5rem;
             border-radius: 8px;
+
+            z-index: 1001;
         }
 
         .show {
@@ -24,82 +31,120 @@
         .hide {
             display: none; visibility: hidden;
         }
+
+
+
+
+
+
         
     </style>
 </head>
 <body>
     
-    <input type="button" class="mac-button" value="click me" id="btnAddItem">
+    <input type="button" class="mac-button" value="click me" id="btnAddTask">
 
     <div id="modalAddItemWrapper" class="hide"></div>
+
+
+
 
 
 <script>
 
 
-class AddItemModal {
-    constructor(column){
-        this.column = column;
+    class AddItemModal {
+        constructor(column){
+            this.column = column;
+        }
+
+        createModalContent(title){
+            // this.modalElement = document.createElement('div');
+            // this.modalElement.classList.add('modalAddItemWrapper');
+        }
     }
 
-    createModalContent(title){
-        // this.modalElement = document.createElement('div');
-        // this.modalElement.classList.add('modalAddItemWrapper');
-    }
 
-    showModal(){
 
-    }
-}
 
-function addItem(e, mouseX, mouseY, col){
-    var thisModal = new AddItemModal(col);
+
     var modalAddItemWrapper = document.getElementById('modalAddItemWrapper');
-    modalAddItemWrapper.classList.add('show');
-    modalAddItemWrapper.classList.remove('hide');
-    modalAddItemWrapper.style.left = `${mouseX-13}px`;
-    modalAddItemWrapper.style.top = `${mouseY-35}px`;
+
+
+    const modalBackground = document.createElement('div');
+    modalBackground.classList.add('modal');
+    modalBackground.setAttribute('id', 'myModal');
+    document.body.appendChild(modalBackground);
+
+    const closeModalBtn = document.createElement('span');
+    closeModalBtn.id = 'closeModalBtn';
+    closeModalBtn.className = 'close';
+    closeModalBtn.textContent = '×';
+    closeModalBtn.addEventListener('click', ()=>{
+        closeModal();
+    });
 
 
 
-const closeModalBtn = document.createElement('span');
-closeModalBtn.id = 'closeModalBtn';
-closeModalBtn.className = 'close';
-closeModalBtn.textContent = '×';
+    modalAddItemWrapper.appendChild(closeModalBtn);
+
+    var newTask = document.createElement('input');
+    newTask.setAttribute('input', 'text')
+    newTask.setAttribute('placeholder', 'New Task')
+    newTask.style.width = '333px';
+    newTask.style.marginRight = '0.75rem';
+    modalAddItemWrapper.appendChild(newTask);
+
+    var addBtn = document.createElement('button');
+    addBtn.innerHTML = 'Add Task';
+    addBtn.style.marginRight = '0.75rem';
+
+    modalAddItemWrapper.appendChild(addBtn);
 
 
-modalAddItemWrapper.appendChild(closeModalBtn);
-// modalAddItemWrapper.appendChild(modalTitle);
-// modalAddItemWrapper.appendChild(modalHeader);
-// modalAddItemWrapper.appendChild(taskListHeading);
 
 
-var newTask = document.createElement('input');
-// newTask.innerHTML = 'New: ';
-newTask.setAttribute('input', 'text')
-newTask.setAttribute('placeholder', 'New Task')
-newTask.style.width = '333px';
-newTask.style.marginRight = '0.75rem';
-// newTask.classList.add
-modalAddItemWrapper.appendChild(newTask);
-newTask.focus();
 
-var addBtn = document.createElement('button');
-addBtn.innerHTML = 'Add Task';
-addBtn.style.marginRight = '0.75rem';
+    function openAddModal(e, mouseX, mouseY, col){
+        var thisModal = new AddItemModal(col);
 
-modalAddItemWrapper.appendChild(addBtn);
-}
-        
+        modalBackground.addEventListener('click', ()=>{
+            closeModal();
+        })
 
-var btnAddItem = document.getElementById('btnAddItem');
+        function showModal(){
+            modalAddItemWrapper.classList.add('show');
+            modalAddItemWrapper.classList.remove('hide');
+            modalAddItemWrapper.style.left = `${mouseX-13}px`;
+            modalAddItemWrapper.style.top = `${mouseY-35}px`;
+            modalBackground.classList.remove('hide');
+            modalBackground.classList.add('show');
+        }
 
-btnAddItem.addEventListener('click', (e) => {
-            // Get mouse coordinates
-            const mouseX = e.clientX;
-            const mouseY = e.clientY;
-            addItem(e, mouseX, mouseY)
+        showModal();
+        newTask.focus();
+    }
+            
+
+
+    function closeModal(){
+            modalAddItemWrapper.classList.add('hide');
+            modalAddItemWrapper.classList.remove('show');
+            modalBackground.classList.remove('show');
+            modalBackground.classList.add('hide');
+        }
+
+
+
+    var btnAddTask = document.getElementById('btnAddTask');
+
+    btnAddTask.addEventListener('click', (e) => {
+        const mouseX = e.clientX;
+        const mouseY = e.clientY;
+
+        openAddModal(e, mouseX, mouseY)
     })
-    </script>
+
+</script>
 </body>
 </html>
