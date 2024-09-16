@@ -36,11 +36,12 @@ export class taskManWidget {
             var cols = thisProjectJson.columns;
 
             cols.forEach((col)=>{
-                var colID = col.elementID;
+                var colName = col.elementID;
                 var thisColumnDiv = document.createElement('div');
                 thisColumnDiv.classList.add('taskColumn');
                 thisColumnDiv.classList.add('container');
-                thisColumnDiv.setAttribute('id', `${projectName}-${colID}`);
+                var colID = `${projectName}-${colName}`;
+                thisColumnDiv.setAttribute('id', colID);
                 thisProjectDiv.append(thisColumnDiv);
 
                 // thisColumnDiv, thisHeading)
@@ -54,6 +55,10 @@ export class taskManWidget {
                 thisAddTaskButton.classList.add('addItemButton');
                 thisAddTaskButton.addEventListener('click', function(){
                     addItem(parentColumn);
+                    var projectName = '';
+                    var colName = '';
+                    var parentEl = '';
+                    // var thisModal = new AddItemModal(projectName, colName, parentEl);
                 });
                 thisColumnDiv.append(thisAddTaskButton);
 

@@ -1,8 +1,11 @@
 
 
 class AddItemModal {
-    constructor(column){
-        this.column = column;
+    constructor(projectName, colName, parentEl){
+        this.colName = colName;
+        this.projectName = projectName;
+        this.parentEl = parentEl;
+        console.log(`${projectName}: ${colName}, parentEl: ${parentEl}`);
 
         
         var startBtn = document.createElement('input');
@@ -96,5 +99,8 @@ class AddItemModal {
 
 
 
-
-var newAddTask = new AddItemModal;
+var parentEl = document.getElementById('freelancing-col1Backlog');
+var newAddTask = new AddItemModal('projectName', 'colName', parentEl);
+// var newAddTask = new AddItemModal('plasma', 'done', 'parentEl');
+// var newAddTask = new AddItemModal('roboticHand', 'backlog', 'parentEl');
+// var newAddTask = new AddItemModal('crystal', 'To Do', 'parentEl');
