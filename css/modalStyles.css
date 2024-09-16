@@ -108,3 +108,32 @@ body, h2, p {
     border-bottom: 1px solid black;
 }
 
+
+
+
+
+
+
+#modalAddItemWrapper{
+    min-width: 333px;
+    width: max-content;
+    /* min-height: 33px; */
+    border: 1px solid rgb(0, 204, 255);
+    background-color: white;
+    position: absolute;
+
+    padding: 0.5rem;
+    border-radius: 8px;
+
+    z-index: 1001;
+}
+
+.show {
+    display: block; visibility: visible;
+}
+.hide {
+    display: none; visibility: hidden;
+}
+
+
+
