@@ -1,12 +1,22 @@
 
-<input type="button" class="mac-button" value="click me" id="btnAddTask">
-<div id="modalAddItemWrapper" class="hide"></div>
+var startBtn = document.createElement('input');
+startBtn.setAttribute('type', 'button');
+startBtn.setAttribute('value', ' + Task');
+startBtn.setAttribute('id', 'btnAddTask');
+startBtn.classList.add('mac-button');
+startBtn.addEventListener('click', ()=>{
+
+})
+document.body.prepend(startBtn);
+
+
+var modalAddItemWrapper = document.createElement('div');
+modalAddItemWrapper.setAttribute('id', 'modalAddItemWrapper');
+modalAddItemWrapper.classList.add('hide');
+document.body.appendChild(modalAddItemWrapper);
 
 
 
-
-
-<script>
 
 
 class AddItemModal {
@@ -92,7 +102,6 @@ function closeModal(){
 
 
 
-var btnAddTask = document.getElementById('btnAddTask');
 
 btnAddTask.addEventListener('click', (e) => {
     const mouseX = e.clientX;
