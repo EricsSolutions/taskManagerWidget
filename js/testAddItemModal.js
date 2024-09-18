@@ -53,10 +53,10 @@ class AddItemModal {
 
         var submitBtn = document.createElement('button');
         submitBtn.innerHTML = 'Add Task';
-        submitBtn.style.marginRight = '0.75rem';
+        submitBtn.setAttribute('id', 'submitBtn');
         modalAddItemWrapper.appendChild(submitBtn);
         submitBtn.addEventListener('click', ()=>{
-            
+
         });
 
 
