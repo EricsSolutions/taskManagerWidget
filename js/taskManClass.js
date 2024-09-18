@@ -53,12 +53,12 @@ export class taskManWidget {
                 var thisAddTaskButton = document.createElement('div');
                 thisAddTaskButton.innerHTML = `+`;
                 thisAddTaskButton.classList.add('addItemButton');
-                thisAddTaskButton.addEventListener('click', function(){
-                    addItem(parentColumn);
-                    var projectName = '';
-                    var colName = '';
-                    var parentEl = '';
-                    // var thisModal = new AddItemModal(projectName, colName, parentEl);
+                thisAddTaskButton.addEventListener('click', function(event){
+                    // addItem(parentColumn);
+                    // var projectName = '';
+                    // var colName = '';
+                    var parentEl = thisColumnDiv;
+                    var thisModal = new AddItemModal(projectName, colName, parentEl, thisAddTaskButton, event);
                 });
                 thisColumnDiv.append(thisAddTaskButton);
 

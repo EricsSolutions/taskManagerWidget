@@ -1,24 +1,29 @@
 
 
 class AddItemModal {
-    constructor(projectName, colName, parentEl){
+    constructor(projectName, colName, parentEl, thisBtn, event){
         this.colName = colName;
         this.projectName = projectName;
         this.parentEl = parentEl;
+        this.thisBtn = thisBtn;
+        this.event = event;
         console.log(`${projectName}: ${colName}, parentEl: ${parentEl}`);
 
         
-        var startBtn = document.createElement('input');
-        startBtn.setAttribute('type', 'button');
-        startBtn.setAttribute('value', '+');
-        startBtn.setAttribute('id', 'btnAddTask');
-        startBtn.classList.add('mac-button');
-        // startBtn.classList.add('addItemButton');
-        startBtn.addEventListener('click', ()=>{
 
-        })
-        document.body.prepend(startBtn);
+        // var startBtn = document.createElement('input');
+        // startBtn.setAttribute('type', 'button');
+        // startBtn.setAttribute('value', '+');
+        // startBtn.setAttribute('id', 'btnAddTask');
+        // startBtn.classList.add('mac-button');
+        // // startBtn.classList.add('addItemButton');
+        // startBtn.addEventListener('click', ()=>{
 
+        // })
+        // document.body.prepend(startBtn);
+
+
+        
 
         const modalAddItemWrapper = document.createElement('div');
         modalAddItemWrapper.setAttribute('id', 'modalAddItemWrapper');
@@ -50,9 +55,12 @@ class AddItemModal {
         submitBtn.innerHTML = 'Add Task';
         submitBtn.style.marginRight = '0.75rem';
         modalAddItemWrapper.appendChild(submitBtn);
+        submitBtn.addEventListener('click', ()=>{
+            
+        });
 
 
-        function openModal(e, mouseX, mouseY, col){
+        function openModal(event, mouseX, mouseY, col){
             // var thisModal = new AddItemModal(col);
 
             modalBackground.addEventListener('click', ()=>{
@@ -71,7 +79,6 @@ class AddItemModal {
             showModal();
             inputNewTask.focus();
         }
-                
 
 
         function closeModal(){
@@ -83,13 +90,10 @@ class AddItemModal {
 
 
 
+        const mouseX = event.clientX;
+        const mouseY = event.clientY;
 
-        btnAddTask.addEventListener('click', (e) => {
-            const mouseX = e.clientX;
-            const mouseY = e.clientY;
-
-            openModal(e, mouseX, mouseY)
-        })
+        openModal(event, mouseX, mouseY)
 
     }
 
