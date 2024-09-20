@@ -7,7 +7,7 @@ class AddItemModal {
         this.parentEl = parentEl;
         this.thisBtn = thisBtn;
         this.event = event;
-        console.log(`${projectName}: ${colName}, parentEl: ${parentEl}`);
+        // console.log(`${projectName}: ${colName}, parentEl: ${parentEl}`);
 
         
 
@@ -29,6 +29,7 @@ class AddItemModal {
         modalAddItemWrapper.setAttribute('id', 'modalAddItemWrapper');
         modalAddItemWrapper.classList.add('hide');
         document.body.appendChild(modalAddItemWrapper);
+        // parentEl.appendChild(modalAddItemWrapper);
 
         const modalBackground = document.createElement('div');
         modalBackground.classList.add('modal');
@@ -70,8 +71,18 @@ class AddItemModal {
             function showModal(){
                 modalAddItemWrapper.classList.add('show');
                 modalAddItemWrapper.classList.remove('hide');
+
+
                 modalAddItemWrapper.style.left = `${mouseX-13}px`;
                 modalAddItemWrapper.style.top = `${mouseY-35}px`;
+
+
+                const rect = parentEl.getBoundingClientRect();
+                const bottomY = rect.bottom;
+                const leftX = rect.left;
+
+                // modalAddItemWrapper.style.bottom = `${bottomY}px`;
+                // modalAddItemWrapper.style.left = `${leftX}px`;
                 modalBackground.classList.remove('hide');
                 modalBackground.classList.add('show');
             }
@@ -90,8 +101,8 @@ class AddItemModal {
 
 
 
-        const mouseX = event.clientX;
-        const mouseY = event.clientY;
+        const mouseX = this.event.clientX;
+        const mouseY = this.event.clientY;
 
         openModal(event, mouseX, mouseY)
 
@@ -103,8 +114,8 @@ class AddItemModal {
 
 
 
-var parentEl = document.getElementById('freelancing-col1Backlog');
-var newAddTask = new AddItemModal('projectName', 'colName', parentEl);
+// var parentEl = document.getElementById('freelancing-col1Backlog');
+// var newAddTask = new AddItemModal('projectName', 'colName', parentEl);
 // var newAddTask = new AddItemModal('plasma', 'done', 'parentEl');
 // var newAddTask = new AddItemModal('roboticHand', 'backlog', 'parentEl');
 // var newAddTask = new AddItemModal('crystal', 'To Do', 'parentEl');

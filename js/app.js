@@ -94,7 +94,6 @@ function makeJsonFromHTML(){
         });
     // Output JSON (e.g., log to console or save to a file)
     // console.log('\n\n JSON: ');
-    console.log(outputArrOfProjects);
     return outputArrOfProjects;
 }
 
@@ -121,7 +120,6 @@ function makeAllProjects(){
             var allProjects = data.projects;
             makeNewWidgets(allProjects);
             var newJson = makeJsonFromHTML();
-            console.log(newJson);
         })
         .catch(error => {
             console.error('There was a problem with the fetch operation:', error);

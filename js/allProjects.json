@@ -9,7 +9,7 @@
             "projectTitle": "3D Fractals",
             "columns": [
                 {
-                    "elementID": "col1Backlog",  
+                    "elementID": "col1Backlog",
                     "heading": "Backlog",
                     "tasks": [
                         {"text": "artwork [frames, tables, etc.]"}, 
