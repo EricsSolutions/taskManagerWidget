@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Scroll Effect</title>
+    <style>
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.parallax {
+    height: 500px; /* Height of the parallax section */
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.content {
+    height: 800px; /* Height for content section */
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    margin: 20px 0;
+}
+
+p {
+    margin: 10px 0;
+}
+
+
+
+    </style>
+</head>
+<body>
+    
+    <script>
+
+
+class ParallaxSection {
+    constructor(imageUrl, headingText, descriptionText) {
+        this.imageUrl = imageUrl;
+        this.headingText = headingText;
+        this.descriptionText = descriptionText;
+        this.createParallaxSection();
+        this.addScrollEffect();
+    }
+
+    createParallaxSection() {
+        // Create parallax div
+        const parallaxDiv = document.createElement('div');
+        parallaxDiv.className = 'parallax';
+        parallaxDiv.style.backgroundImage = `url('${this.imageUrl}')`;
+        
+        // Create content div
+        const contentDiv = document.createElement('div');
+        contentDiv.className = 'content';
+        
+        const heading = document.createElement('h1');
+        heading.textContent = this.headingText;
+        
+        const description = document.createElement('p');
+        description.textContent = this.descriptionText;
+
+        contentDiv.appendChild(heading);
+        contentDiv.appendChild(description);
+        contentDiv.innerHTML += '<div style="height: 800px;"></div>'; // Spacer for scrolling
+        
+        // Append to body
+        document.body.appendChild(parallaxDiv);
+        document.body.appendChild(contentDiv);
+    }
+
+    addScrollEffect() {
+        window.addEventListener('scroll', () => {
+            const offset = window.pageYOffset; // Get the current scroll position
+            const parallax = document.querySelector('.parallax');
+            parallax.style.backgroundPositionY = `${offset * 0.5}px`; // Move background at half the scroll speed
+        });
+    }
+}
+
+
+
+
+
+        // Create an instance of ParallaxSection
+        new ParallaxSection(
+            './05.jpg', // Background image
+            'Welcome to Parallax Scrolling', // Main heading
+            'This is a simple parallax scroll effect with moving background. Scroll down to see the effect in action!' // Description
+        );
+    </script>
+</body>
+</html>
