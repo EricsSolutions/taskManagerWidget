@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Gallery</title>
+    <style>
+        .gallery {
+            width: 50vw;
+            margin: auto;
+            background-color: rgb(81, 103, 136);
+            border-radius: .5rem;
+            padding: 1rem;
+            transition: height 0.5s ease;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .thumbnail {
+            width: 10vw;
+            height: 10vw;
+            border: 1px solid white;
+            margin: 5px;
+        }
+
+        #hiddenThumbs {
+            opacity: 0;
+            height: 0;
+            overflow: hidden;
+            transition: opacity 0.25s ease, height 0.5s ease;
+        }
+
+        #hiddenThumbs.visible {
+            opacity: 1;
+            height: auto; /* Allow height to adjust to content */
+        }
+
+        #hiddenThumbs > img {
+            display: inline-block;
+        }
+
+        #viewMoreBtn.hidden {
+            display: none;
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery" id="gallery"></div>
+
+    <script>
+        const images = [
+            { src: './images/thumbnail.jpg', alt: 'Image 1' },
+            { src: './images/thumbnail.jpg', alt: 'Image 2' },
+            { src: './images/thumbnail.jpg', alt: 'Image 3' },
+            { src: './images/thumbnail.jpg', alt: 'Image 4' },
+            { src: './images/thumbnail.jpg', alt: 'Image 5' },
+            { src: './images/thumbnail.jpg', alt: 'Image 6' },
+            { src: './images/thumbnail.jpg', alt: 'Image 7' },
+            { src: './images/thumbnail.jpg', alt: 'Image 8' },
+            { src: './images/thumbnail.jpg', alt: 'Image 9' },
+        ];
+
+        function createGallery() {
+            const gallery = document.getElementById('gallery');
+
+            // Create visible thumbnails
+            images.slice(0, 3).forEach(image => {
+                const img = document.createElement('img');
+                img.src = image.src;
+                img.alt = image.alt;
+                img.classList.add('thumbnail');
+                gallery.appendChild(img);
+            });
+
+            // Create hidden thumbnails container
+            const hiddenThumbs = document.createElement('div');
+            hiddenThumbs.id = 'hiddenThumbs';
+
+            // Create hidden thumbnails
+            images.slice(3).forEach(image => {
+                const img = document.createElement('img');
+                img.src = image.src;
+                img.alt = image.alt;
+                img.classList.add('thumbnail');
+                hiddenThumbs.appendChild(img);
+            });
+
+            gallery.appendChild(hiddenThumbs);
+
+            // Create View More button
+            const viewMoreBtn = document.createElement('button');
+            viewMoreBtn.id = 'viewMoreBtn';
+            viewMoreBtn.textContent = 'View More';
+            gallery.appendChild(viewMoreBtn);
+
+            // Event listener for the View More button
+            viewMoreBtn.addEventListener('click', () => {
+                hiddenThumbs.classList.toggle('visible');
+                viewMoreBtn.classList.toggle('hidden');
+            });
+        }
+
+        // Initialize the gallery
+        createGallery();
+    </script>
+</body>
+</html>

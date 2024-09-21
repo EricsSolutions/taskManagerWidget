@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Gallery</title>
+    <style>
+        .gallery {
+            width: 50vw;
+            margin: auto;
+            background-color: rgb(81, 103, 136);
+            border-radius: .5rem;
+            padding: 1rem;
+            transition: height 0.5s ease;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .thumbnail {
+            width: 10vw;
+            height: 10vw;
+            border: 1px solid white;
+            margin: 5px;
+        }
+
+        #hiddenThumbs {
+            opacity: 0;
+            height: 0;
+            overflow: hidden;
+            transition: opacity 0.25s ease, height 0.5s ease;
+        }
+
+        #hiddenThumbs.visible {
+            opacity: 1;
+            height: auto; /* Allow height to adjust to content */
+        }
+
+        #hiddenThumbs > img {
+            display: inline-block;
+        }
+
+        #viewMoreBtn.hidden {
+            display: none;
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div id="galleryContainer"></div>
+
+    <script>
+        class Gallery {
+            constructor(containerId, images) {
+                this.container = document.getElementById(containerId);
+                this.images = images;
+                this.createGallery();
+            }
+
+            createGallery() {
+                // Create visible thumbnails
+                this.images.slice(0, 3).forEach(image => {
+                    const img = document.createElement('img');
+                    img.src = image.src;
+                    img.alt = image.alt;
+                    img.classList.add('thumbnail');
+                    this.container.appendChild(img);
+                });
+
+                // Create hidden thumbnails container
+                const hiddenThumbs = document.createElement('div');
+                hiddenThumbs.id = 'hiddenThumbs';
+
+                // Create hidden thumbnails
+                this.images.slice(3).forEach(image => {
+                    const img = document.createElement('img');
+                    img.src = image.src;
+                    img.alt = image.alt;
+                    img.classList.add('thumbnail');
+                    hiddenThumbs.appendChild(img);
+                });
+
+                this.container.appendChild(hiddenThumbs);
+
+                // Create View More button
+                const viewMoreBtn = document.createElement('button');
+                viewMoreBtn.id = 'viewMoreBtn';
+                viewMoreBtn.textContent = 'View More';
+                this.container.appendChild(viewMoreBtn);
+
+                // Event listener for the View More button
+                viewMoreBtn.addEventListener('click', () => {
+                    hiddenThumbs.classList.toggle('visible');
+                    viewMoreBtn.classList.toggle('hidden');
+                });
+            }
+        }
+
+        // Example gallery data
+        const galleryData1 = [
+            { src: './images/thumbnail1.jpg', alt: 'Image 1' },
+            { src: './images/thumbnail2.jpg', alt: 'Image 2' },
+            { src: './images/thumbnail3.jpg', alt: 'Image 3' },
+            { src: './images/thumbnail4.jpg', alt: 'Image 4' },
+            { src: './images/thumbnail5.jpg', alt: 'Image 5' },
+            { src: './images/thumbnail6.jpg', alt: 'Image 6' },
+            { src: './images/thumbnail7.jpg', alt: 'Image 7' },
+            { src: './images/thumbnail8.jpg', alt: 'Image 8' },
+            { src: './images/thumbnail9.jpg', alt: 'Image 9' },
+        ];
+
+        const galleryData2 = [
+            { src: './images/thumbnail10.jpg', alt: 'Image 10' },
+            { src: './images/thumbnail11.jpg', alt: 'Image 11' },
+            { src: './images/thumbnail12.jpg', alt: 'Image 12' },
+            { src: './images/thumbnail13.jpg', alt: 'Image 13' },
+            { src: './images/thumbnail14.jpg', alt: 'Image 14' },
+        ];
+
+        // Create multiple galleries
+        new Gallery('galleryContainer', galleryData1);
+        new Gallery('galleryContainer', galleryData2);
+    </script>
+</body>
+</html>

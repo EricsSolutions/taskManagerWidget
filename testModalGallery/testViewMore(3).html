@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Gallery</title>
+    <style>
+        .gallery {
+            width: 50vw;
+            margin: auto;
+            background-color: rgb(81, 103, 136);
+            border-radius: .5rem;
+            padding: 1rem;
+            transition: height 0.5s ease;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .thumbnail {
+            width: 10vw;
+            height: 10vw;
+            border: 1px solid white;
+            margin: 5px;
+        }
+
+        #hiddenThumbs {
+            opacity: 0;
+            height: 0;
+            overflow: hidden;
+            transition: opacity 0.5s ease, height 0.5s ease;
+        }
+
+        #hiddenThumbs.visible {
+            opacity: 1;
+            height: auto; /* Allow height to adjust to content */
+            margin-top: 10px; /* Optional spacing when visible */
+        }
+
+        #hiddenThumbs > img {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery" id="gallery">
+        <img src="./images/thumbnail.jpg" alt="Image 1" class="thumbnail">
+        <img src="./images/thumbnail.jpg" alt="Image 2" class="thumbnail">
+        <img src="./images/thumbnail.jpg" alt="Image 3" class="thumbnail">
+
+        <div id="hiddenThumbs">
+            <img src="./images/thumbnail.jpg" alt="Image 4" class="thumbnail">
+            <img src="./images/thumbnail.jpg" alt="Image 5" class="thumbnail">
+            <img src="./images/thumbnail.jpg" alt="Image 6" class="thumbnail">
+        </div>
+        <button id="viewMoreBtn">View More</button>
+    </div>
+
+    <script>
+        const viewMoreBtn = document.getElementById('viewMoreBtn');
+        const hiddenThumbs = document.getElementById('hiddenThumbs');
+
+        viewMoreBtn.addEventListener('click', () => {
+            hiddenThumbs.classList.toggle('visible');
+        });
+    </script>
+</body>
+</html>
