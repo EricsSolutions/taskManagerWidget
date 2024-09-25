@@ -103,7 +103,12 @@
                     "heading": "Backlog",
                     "tasks": [
                         {"text": "Make contracts"},
-                        {"text": "Make contracts databse"}
+                        {"text": "Make contracts databse"},
+                        {"text": "[portfolio] Espionage site"},
+                        {"text": "[portfolio] Chef Eric site"},
+                        {"text": "[portfolio] Freemasonry & the Holy Grail site"},
+                        {"text": "[portfolio] art gallery site"},
+                        {"text": "[portfolio] red site"}
                     ]
                 }, 
                 {
