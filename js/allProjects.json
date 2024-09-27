@@ -102,13 +102,6 @@
                     "elementID": "col1Backlog",  
                     "heading": "Backlog",
                     "tasks": [
-                        {"text": "registered agent {$125}"},
-                        {"text": "business license {$25}"},
-                        {"text": "Make contracts"},
-                        {"text": "Make contracts databse"},
-                        {"text": "business cards"},
-                        {"text": "[portfolio] Espionage site"},
-                        {"text": "[portfolio] Chef Eric site"},
                         {"text": "[portfolio] Freemasonry & the Holy Grail site"},
                         {"text": "[portfolio] art gallery site"},
                         {"text": "[portfolio] red site"}
@@ -118,13 +111,21 @@
                     "elementID": "col2Ready",  
                     "heading": "Ready",
                     "tasks": [
-                        {"text": "Use ChatGPT to finish pages. "}
+                        {"text": "registered agent {$125}"},
+                        {"text": "business license {$25}"},
+                        {"text": "Make contracts"},
+                        {"text": "Make contracts databse"},
+                        {"text": "[portfolio] Chef Eric site"}
                     ]
                 }, 
                 {
                     "elementID": "col3InProgress",  
                     "heading": "In Progress",
                     "tasks": [
+                        {"text": "Use ChatGPT to finish pages. "},
+                        {"text": "[portfolio] Espionage site"},
+                        {"text": "business cards"}, 
+                        {"text": "[portfolio] taskmanger widget"}
                     ]
                 }, 
                 {
