@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Encryption 2</title>
+</head>
+<body>
+    
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script>
+
+// Encrypt the JSON: 
+const jsonData = { key: "value" };
+const jsonString = JSON.stringify(jsonData);
+const passphrase = "your-secure-passphrase";
+
+const encrypted = CryptoJS.AES.encrypt(jsonString, passphrase).toString();
+console.log(encrypted);
+
+
+// Decrypt the JSON:
+const bytes = CryptoJS.AES.decrypt(encrypted, passphrase);
+const decrypted = bytes.toString(CryptoJS.enc.Utf8);
+const decryptedData = JSON.parse(decrypted);
+console.log(decryptedData);
+
+    </script>
+</body>
+</html>

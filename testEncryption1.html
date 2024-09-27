@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Encryption 1</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+const jsonData = { key: "value" };
+const jsonString = JSON.stringify(jsonData);
+
+async function generateKey() {
+    return await crypto.subtle.generateKey(
+        {
+            name: "AES-GCM",
+            length: 256,
+        },
+        true,
+        ["encrypt", "decrypt"]
+    );
+}
+
+async function encrypt(jsonString, key) {
+    const iv = crypto.getRandomValues(new Uint8Array(12)); // Initialization vector
+    const encoded = new TextEncoder().encode(jsonString);
+    const ciphertext = await crypto.subtle.encrypt(
+        {
+            name: "AES-GCM",
+            iv: iv,
+        },
+        key,
+        encoded
+    );
+    return { ciphertext: new Uint8Array(ciphertext), iv }; // Return both ciphertext and IV
+}
+
+(async () => {
+    const key = await generateKey();
+    const { ciphertext, iv } = await encrypt(jsonString, key);
+    console.log(ciphertext, iv);
+})();
+
+
+
+
+
+    </script>
+</body>
+</html>
