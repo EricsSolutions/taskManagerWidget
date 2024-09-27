@@ -2,9 +2,140 @@
     "projects": [
 
 
+        {"name": "ericsSolutions", 
+            "thumbnailUrl": "./images/ericsSolutions.png",
+            "projectTitle": "Eric's Solutions, LLC",
+            "columns": [
+                {
+                    "elementID": "col1Backlog",  
+                    "heading": "Backlog",
+                    "tasks": [
+                        {"text": "[portfolio] art gallery site"},
+                        {"text": "[portfolio] red site"}
+                    ]
+                }, 
+                {
+                    "elementID": "col2Ready",  
+                    "heading": "Ready",
+                    "tasks": [
+                        {"text": "registered agent {$125}"},
+                        {"text": "business license {$25}"},
+                        {"text": "Make contracts"},
+                        {"text": "Make contracts databse"},
+                        {"text": "[portfolio] Chef Eric site"}
+                    ]
+                }, 
+                {
+                    "elementID": "col3InProgress",  
+                    "heading": "In Progress",
+                    "tasks": [
+                        {"text": "Use ChatGPT to finish pages. "},
+                        {"text": "[portfolio] Espionage site"},
+                        {"text": "business cards"}, 
+                        {"text": "[portfolio] Freemasonry & the Holy Grail site"},
+                        {"text": "[portfolio] taskmanger widget"}
+                    ]
+                }, 
+                {
+                    "elementID": "col4Review",  
+                    "heading": "Review",
+                    "tasks": [
+                    ]
+                }, 
+                {
+                    "elementID": "col5Done",  
+                    "heading": "Done",
+                    "tasks": [
+                    ]
+                }
+            ]
+        }, 
 
-        {
-            "name": "3dFractals", 
+
+        {"name": "portEsp", 
+            "thumbnailUrl": "./images/portfolioEspionageFavIco.svg",
+            "projectTitle": "Portfolio - Espionage Site",
+            "columns": [
+                {
+                    "elementID": "col1Backlog",  
+                    "heading": "Backlog",
+                    "tasks": [
+                        {"text": "Consider better scroll effects. "}
+                    ]
+                }, 
+                {
+                    "elementID": "col2Ready",  
+                    "heading": "Ready",
+                    "tasks": [
+                        {"text": "Responsive design to show menu @ left side when on desktop version; hide menu and show hamburger button in smaller versions"}
+                    ]
+                }, 
+                {
+                    "elementID": "col3InProgress",  
+                    "heading": "In Progress",
+                    "tasks": [
+                        {"text": "Tell the story as well as possible; Get reviews/input. "}
+                    ]
+                }, 
+                {
+                    "elementID": "col4Review",  
+                    "heading": "Review",
+                    "tasks": [
+                    ]
+                }, 
+                {
+                    "elementID": "col5Done",  
+                    "heading": "Done",
+                    "tasks": [
+                    ]
+                }
+            ]
+        }, 
+
+        
+        {"name": "portHG", 
+            "thumbnailUrl": "./images/portfolioHolyGrail.png",
+            "projectTitle": "Portfolio - Holy Grail",
+            "columns": [
+                {
+                    "elementID": "col1Backlog",  
+                    "heading": "Backlog",
+                    "tasks": [
+                    ]
+                }, 
+                {
+                    "elementID": "col2Ready",  
+                    "heading": "Ready",
+                    "tasks": [
+                        {"text": "Record video segments. "}, 
+                        {"text": "Edit video. "},
+                        {"text": "Write scholarly paper. Make PDF. "}
+
+                    ]
+                }, 
+                {
+                    "elementID": "col3InProgress",  
+                    "heading": "In Progress",
+                    "tasks": [
+                    ]
+                }, 
+                {
+                    "elementID": "col4Review",  
+                    "heading": "Review",
+                    "tasks": [
+                    ]
+                }, 
+                {
+                    "elementID": "col5Done",  
+                    "heading": "Done",
+                    "tasks": [
+                    ]
+                }
+            ]
+        }, 
+
+        
+        {"name": "3dFractals", 
             "thumbnailUrl": "./images/3dFractal.png",
             "projectTitle": "3D Fractals",
             "columns": [
@@ -50,8 +181,7 @@
         }, 
 
 
-        {
-            "name": "freelancing", 
+        {"name": "freelancing", 
             "thumbnailUrl": "./images/freelancingCode.jpg",
             "projectTitle": "Freelancing",
             "columns": [
@@ -93,59 +223,7 @@
         }, 
 
 
-        {
-            "name": "ericsSolutions", 
-            "thumbnailUrl": "./images/ericsSolutions.png",
-            "projectTitle": "Eric's Solutions, LLC",
-            "columns": [
-                {
-                    "elementID": "col1Backlog",  
-                    "heading": "Backlog",
-                    "tasks": [
-                        {"text": "[portfolio] Freemasonry & the Holy Grail site"},
-                        {"text": "[portfolio] art gallery site"},
-                        {"text": "[portfolio] red site"}
-                    ]
-                }, 
-                {
-                    "elementID": "col2Ready",  
-                    "heading": "Ready",
-                    "tasks": [
-                        {"text": "registered agent {$125}"},
-                        {"text": "business license {$25}"},
-                        {"text": "Make contracts"},
-                        {"text": "Make contracts databse"},
-                        {"text": "[portfolio] Chef Eric site"}
-                    ]
-                }, 
-                {
-                    "elementID": "col3InProgress",  
-                    "heading": "In Progress",
-                    "tasks": [
-                        {"text": "Use ChatGPT to finish pages. "},
-                        {"text": "[portfolio] Espionage site"},
-                        {"text": "business cards"}, 
-                        {"text": "[portfolio] taskmanger widget"}
-                    ]
-                }, 
-                {
-                    "elementID": "col4Review",  
-                    "heading": "Review",
-                    "tasks": [
-                    ]
-                }, 
-                {
-                    "elementID": "col5Done",  
-                    "heading": "Done",
-                    "tasks": [
-                    ]
-                }
-            ]
-        }, 
-
-
-        {
-            "name": "fullTimeEmployment", 
+        {"name": "fullTimeEmployment", 
             "thumbnailUrl": "./images/fulltimeDeveloper.png",
             "projectTitle": "Full Time Employment",
             "columns": [
@@ -188,8 +266,7 @@
         }, 
 
 
-        {
-            "name": "plasma", 
+        {"name": "plasma", 
             "thumbnailUrl": "./images/plasma.png",
             "projectTitle": "Plasma",
             "columns": [
@@ -233,8 +310,7 @@
         }, 
 
 
-        {
-            "name": "crystals", 
+        {"name": "crystals", 
             "thumbnailUrl": "./images/crystal.jpg",
             "projectTitle": "Crystals",
             "columns": [
@@ -275,8 +351,7 @@
         }, 
 
 
-        {
-            "name": "robotics", 
+        {"name": "robotics", 
             "thumbnailUrl": "./images/robotics.jpg",
             "projectTitle": "Robotics",
             "columns": [
@@ -315,8 +390,7 @@
         }, 
 
 
-        {
-            "name": "taxels", 
+        {"name": "taxels", 
             "thumbnailUrl": "./images/taxel.jpg",
             "projectTitle": "Taxels",
             "columns": [
@@ -358,8 +432,7 @@
         }, 
 
 
-        {
-            "name": "handMechanical", 
+        {"name": "handMechanical", 
             "thumbnailUrl": "./images/roboticHand.jpg",
             "projectTitle": "Robotic Hand",
             "columns": [
@@ -404,8 +477,7 @@
         }, 
 
 
-        {
-            "name": "handTeflon", 
+        {"name": "handTeflon", 
             "thumbnailUrl": "./images/roboticHand.jpg",
             "projectTitle": "Teflon Jointed Robotic Hand",
             "columns": [
@@ -445,8 +517,7 @@
         }, 
 
 
-        {
-            "name": "kitchenAutomation", 
+        {"name": "kitchenAutomation", 
             "thumbnailUrl": "./images/kitchenAutomation.jpg",
             "projectTitle": "Kitchen Automation",
             "columns": [
@@ -485,8 +556,7 @@
         }, 
 
 
-        {
-            "name": "grilledCheeseMachine", 
+        {"name": "grilledCheeseMachine", 
             "thumbnailUrl": "",
             "projectTitle": "Grilled Cheese Machine",
             "columns": [
@@ -525,8 +595,7 @@
         }, 
 
 
-        {
-            "name": "dishwashingRobot", 
+        {"name": "dishwashingRobot", 
             "thumbnailUrl": "./images/dishwashingRobot.jpg",
             "projectTitle": "Dishwashing Robot",
             "columns": [
@@ -565,8 +634,7 @@
         }, 
 
 
-        {
-            "name": "cookingRobot", 
+        {"name": "cookingRobot", 
             "thumbnailUrl": "./images/cookingBot.png",
             "projectTitle": "Dishwashing Robot",
             "columns": [
