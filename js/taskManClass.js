@@ -65,7 +65,7 @@ export class taskManWidget {
 
 
                 var thisEditTasksButton = document.createElement('div');
-                thisEditTasksButton.innerHTML = `. . . more options`;
+                thisEditTasksButton.innerHTML = `Edit`;
                 // thisEditTasksButton.innerHTML = `[EDIT / DELETE]`;
                 thisEditTasksButton.classList.add('editListButton');
                 thisEditTasksButton.addEventListener('click', function(){
