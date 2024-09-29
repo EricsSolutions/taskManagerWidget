@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        nav {
+            width: 200px;
+            float: left;
+            background: #f4f4f4;
+            padding: 15px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+        main {
+            margin-left: 220px; /* Accommodate the width of the nav */
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 20px;
+            padding: 10px;
+            background: #e7e7e7;
+            border: 1px solid #ccc;
+        }
+        footer {
+            clear: both;
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+        a:hover {
+            color: #4CAF50;
+        }
+
+        /* Base styles for all devices */
+        body {
+            font-size: 16px;
+        }
+
+        /* Extra Small Devices */
+        @media (max-width: 575px) {
+            body {
+                font-size: 14px;
+            }
+            nav {
+                width: 100%; /* Full width for the nav */
+                float: none; /* Remove float */
+                box-shadow: none; /* Remove shadow */
+            }
+            main {
+                margin-left: 0; /* Reset margin */
+                padding: 10px; /* Adjust padding */
+            }
+        }
+
+        /* Small Devices */
+        @media (min-width: 576px) and (max-width: 767px) {
+            body {
+                font-size: 15px;
+            }
+        }
+
+        /* Medium Devices */
+        @media (min-width: 768px) and (max-width: 991px) {
+            body {
+                font-size: 16px;
+            }
+        }
+
+        /* Large Devices */
+        @media (min-width: 992px) and (max-width: 1199px) {
+            body {
+                font-size: 17px;
+            }
+        }
+
+        /* Extra Large Devices */
+        @media (min-width: 1200px) {
+            body {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>My Website</h1>
+</header>
+
+<nav>
+    <h2>Navigation</h2>
+    <ul>
+        <li><a href="#section1">Section 1</a></li>
+        <li><a href="#section2">Section 2</a></li>
+        <li><a href="#section3">Section 3</a></li>
+    </ul>
+</nav>
+
+<main>
+    <section id="section1">
+        <h2>Section 1</h2>
+        <p>This is the content for section 1.</p>
+    </section>
+    <section id="section2">
+        <h2>Section 2</h2>
+        <p>This is the content for section 2.</p>
+    </section>
+    <section id="section3">
+        <h2>Section 3</h2>
+        <p>This is the content for section 3.</p>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 My Website</p>
+</footer>
+
+</body>
+</html>
