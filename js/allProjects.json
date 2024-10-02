@@ -31,7 +31,7 @@
                     "tasks": [
                         {"text": "Use ChatGPT to finish pages. "},
                         {"text": "[portfolio] Espionage site"},
-                        {"text": "business cards"}, 
+                        {"text": "[business cards] PRINT & CUT"}, 
                         {"text": "[portfolio] Freemasonry & the Holy Grail site"},
                         {"text": "[portfolio] taskmanger widget"}
                     ]
@@ -40,6 +40,7 @@
                     "elementID": "col4Review",  
                     "heading": "Review",
                     "tasks": [
+                        {"text": "[business cards] ordered paper + cutter"}
                     ]
                 }, 
                 {
@@ -67,7 +68,6 @@
                     "elementID": "col2Ready",  
                     "heading": "Ready",
                     "tasks": [
-                        {"text": "Responsive design to show menu @ left side when on desktop version; hide menu and show hamburger button in smaller versions"}
                     ]
                 }, 
                 {
@@ -87,6 +87,7 @@
                     "elementID": "col5Done",  
                     "heading": "Done",
                     "tasks": [
+                        {"text": "Responsive design to show menu @ left side when on desktop version; hide menu and show hamburger button in smaller versions"}
                     ]
                 }
             ]
@@ -117,6 +118,7 @@
                     "elementID": "col3InProgress",  
                     "heading": "In Progress",
                     "tasks": [
+                        {"text": "develop written portion"}
                     ]
                 }, 
                 {
@@ -240,14 +242,14 @@
                     "elementID": "col2Ready",  
                     "heading": "Ready",
                     "tasks": [
-                        {"text": "Resume"}
+                        {"text": "Resume"}, 
+                        {"text": "job applications"}
                     ]
                 }, 
                 {
                     "elementID": "col3InProgress",  
                     "heading": "In Progress",
                     "tasks": [
-                        {"text": "job applications"}
                     ]
                 }, 
                 {
