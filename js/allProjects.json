@@ -40,13 +40,13 @@
                     "elementID": "col4Review",  
                     "heading": "Review",
                     "tasks": [
-                        {"text": "[business cards] ordered paper + cutter"}
                     ]
                 }, 
                 {
                     "elementID": "col5Done",  
                     "heading": "Done",
                     "tasks": [
+                        {"text": "[business cards] order paper + cutter"}
                     ]
                 }
             ]

@@ -260,3 +260,81 @@ body{
 .projectTaxels {
     background-image: url('../images/tactile-sensor-768x499.jpg');
 }
+
+
+
+
+
+
+
+/* Extra Small Devices */
+@media (max-width: 575px) {
+    .oneProject {
+        text-align: center;
+    }
+    .thumbnailWrapper {
+        margin: auto;
+    }
+    .taskColumn {
+        position: relative;
+        display: block;
+        max-width: none;
+        width: 75%;
+        margin: 1.5rem auto;
+    }
+}
+
+/* Small Devices */
+@media (min-width: 576px) and (max-width: 767px) {
+    .oneProject {
+        text-align: center;
+    }
+    .thumbnailWrapper {
+        margin: auto;
+    }
+    .taskColumn {
+        position: relative;
+        display: block;
+        max-width: none;
+        width: 75%;
+        margin: 1.5rem auto;
+    }
+}
+
+/* Medium Devices */
+@media (min-width: 768px) and (max-width: 991px) {
+    
+    .oneProject {
+        text-align: center;
+    }
+    .thumbnailWrapper {
+        margin: auto;
+    }
+    .taskColumn {
+        position: relative;
+        display: block;
+        max-width: none;
+        width: 75%;
+        margin: 1.5rem auto;
+        box-shadow: rgb(109, 109, 109) 12px 12px 15px
+    }
+    
+}
+
+/* Large Devices */
+@media (min-width: 992px) and (max-width: 1199px) {
+    
+    .taskColumn {
+        position: relative;
+        display: inline-block;
+    }
+}
+
+/* Extra Large Devices */
+@media (min-width: 1200px) {
+    
+    .taskColumn {
+        position: relative;
+        display: inline-block;
+    }
+}
